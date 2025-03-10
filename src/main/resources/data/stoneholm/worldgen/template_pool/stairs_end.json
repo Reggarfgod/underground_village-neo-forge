@@ -1,0 +1,15 @@
+{
+  "name": "stoneholm:stairs_end",
+  "fallback": "stoneholm:end",
+  "elements": [
+    {
+      "weight": 1,
+      "element": {
+        "location": "stoneholm:stairs/stairs_end",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

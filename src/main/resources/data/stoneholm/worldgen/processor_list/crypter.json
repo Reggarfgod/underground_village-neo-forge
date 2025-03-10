@@ -1,0 +1,84 @@
+{
+  "processors": [
+    {
+      "processor_type": "minecraft:rule",
+      "rules": [
+        {
+          "input_predicate": {
+            "block": "minecraft:cobblestone",
+            "probability": 0.01,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "always_true"
+
+          }, "output_state": {
+          "Name": "minecraft:mossy_cobblestone"
+        }
+        },
+        {
+
+          "input_predicate": {
+            "block": "minecraft:barrel",
+            "probability": 0.85,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "always_true"
+          },"output_state": {
+          "Name": "minecraft:cobblestone"
+        }
+        },
+        {
+          "output_state": {
+            "Properties":{
+              "rotation": "12"
+            },
+            "Name": "minecraft:wither_skeleton_skull"
+          },
+          "input_predicate": {
+            "block": "minecraft:skeleton_skull",
+            "probability": 0.005,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "always_true"
+          }
+        },
+        
+        {
+          "output_state": {
+            "Name": "minecraft:air"
+          },
+          "input_predicate": {
+            "block": "minecraft:skeleton_skull",
+            "probability": 0.6,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "always_true"
+          }
+        },
+        {
+          "output_state": {
+            "Properties":{
+              "facing": "north",
+              "lit": "false",
+              "signal_fire": "false",
+              "waterlogged": "false"
+            },
+            "Name": "minecraft:campfire"
+          },
+          "input_predicate": {
+            "block": "minecraft:campfire",
+            "probability": 0.15,
+            "predicate_type": "minecraft:random_block_match"
+          },
+          "location_predicate": {
+            "predicate_type": "always_true"
+          }
+        }
+      ]
+    }
+  ]
+}
