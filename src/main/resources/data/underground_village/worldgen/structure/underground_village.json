@@ -1,11 +1,11 @@
 {
-  "biomes": "#stoneholm:has_structure/underground_village",
+  "biomes": "#underground_village:has_structure/underground_village",
   "adapt_noise": false,
   "liquid_settings": "ignore_waterlogging",
   "spawn_overrides": {},
-  "type": "minecraft:jigsaw",
+  "type": "underground_village:underground_structures",
   "start_pool": "stoneholm:start_pool",
-  "size": 18,
+  "size": 15,
   "step": "surface_structures",
   "start_height": {
     "absolute": 0
@@ -15,4 +15,3 @@
   "terrain_adaptation": "beard_thin",
   "use_expansion_hack": true
 }
-

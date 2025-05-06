@@ -1,0 +1,8 @@
+{
+  "text.autoconfig.underground_village.title": "UnderGround Village Config",
+  "text.autoconfig.underground_village.option.common.structureSize.@Tooltip": "UnderGround Village Size",
+  "text.autoconfig.underground_village.option.common.maxDistanceFromCenter.@Tooltip": "Max Distance From Center",
+  "text.autoconfig.underground_village.option.common.structureSize": "UnderGround Village Size",
+  "text.autoconfig.underground_village.option.common.maxDistanceFromCenter": "Max Distance From Center"
+
+}

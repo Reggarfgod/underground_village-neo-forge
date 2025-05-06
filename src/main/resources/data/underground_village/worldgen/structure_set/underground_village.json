@@ -1,7 +1,7 @@
 {
   "structures": [
     {
-      "structure": "stoneholm:underground_village",
+      "structure": "underground_village:underground_village",
       "weight": 1
     }
   ],
@@ -10,6 +10,6 @@
 
     "spacing": 32,
     "separation": 8,
-    "type": "minecraft:random_spread"
+    "type": "underground_village:distance_based_structure_placement"
   }
 }
