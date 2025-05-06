@@ -18,10 +18,12 @@ public class USConfigs extends PartitioningSerializer.GlobalData {
     public static final class Common implements ConfigData {
 
         @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
         @Comment("Default size of the underground structure (from 1 to 30)")
         public int structureSize = 15;
 
         @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
         @Comment("Maximum distance the structure pieces can be from the center (1 to 128)")
         public int maxDistanceFromCenter = 116;
     }
