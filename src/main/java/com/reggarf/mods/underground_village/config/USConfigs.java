@@ -20,7 +20,7 @@ public class USConfigs extends PartitioningSerializer.GlobalData {
         @ConfigEntry.Gui.Tooltip
         @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
         @Comment("Default size of the underground structure (from 1 to 30)")
-        public int structureSize = 15;
+        public int structureSize = 19;
 
         @ConfigEntry.Gui.Tooltip
         @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
