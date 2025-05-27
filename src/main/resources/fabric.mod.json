@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "underground_village",
+  "version": "${version}",
+  "name": "underground_village",
+  "description": "Underground Village, Adding in sprawling mazes of underground halls and floors Stoneholm fills the world with a new type of village. Explore confusing hallways & convert the place to your own home or build yours above it trapping the villagers underground for eternity, or just kidnap the villagers for your own not nefarious purposes.",
+  "authors": ["Reggarf"],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/underground-villages-stoneholm",
+    "sources": "https://github.com/Reggarfgod/underground_village-neo-forge",
+    "issues": "https://github.com/Reggarfgod/underground_village-neo-forge/issues",
+    "discord": "https://discord.gg/CN962KMpJk "
+  },
+  "license": "MIT",
+  "icon": "icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "fabric-datagen": [
+      "com.reggarf.mods.underground_village.client.Underground_villageDataGenerator"
+    ],
+    "client": [
+      "com.reggarf.mods.underground_village.client.Underground_villageClient"
+    ],
+    "main": [
+      "com.reggarf.mods.underground_village.Underground_village"
+    ],
+    "modmenu": [
+      "com.reggarf.mods.underground_village.config.USMenuIntegration"
+    ]
+  },
+  "mixins": [
+    "underground_village.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=${loader_version}",
+    "fabric": "*",
+    "minecraft": "${minecraft_version}",
+    "cloth-config2": "*"
+  },
+  "custom": {
+    "catalogue": {
+      "icon": {
+        "image": "catalogue_icon.png"
+      },
+      "banner": "logo.png",
+      "background": "catalogue_background.png"
+    }
+  }
+}
