@@ -1,6 +1,7 @@
 package com.reggarf.mods.underground_village.register;
 
 import com.mojang.serialization.MapCodec;
+import com.reggarf.mods.underground_village.structure.UnderwaterStructures;
 import com.reggarf.mods.underground_village.structure.UndergroundStructure;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.Structure;
@@ -23,7 +24,7 @@ public class USStructures {
      * this base structure will have the resourcelocation of structure_tutorial:sky_structures.
      */
   public static final DeferredHolder<StructureType<?>, StructureType<UndergroundStructure>> UNDERGROUND_STRUCTURE = DEFERRED_REGISTRY_STRUCTURE.register("underground_structures", () -> explicitStructureTypeTyping(UndergroundStructure.CODEC));
-
+    public static final DeferredHolder<StructureType<?>, StructureType<UnderwaterStructures>> UNDERWATER_STRUCTURES = DEFERRED_REGISTRY_STRUCTURE.register("underwater_structures", () -> explicitStructureTypeTyping(UnderwaterStructures.CODEC));
     /**
      * Originally, I had a double lambda ()->()-> for the RegistryObject line above, but it turns out that
      * some IDEs cannot resolve the typing correctly. This method explicitly states what the return type
