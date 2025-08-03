@@ -51,7 +51,7 @@ public class USMessage {
         Component discord = Component.literal(" - ")
                 .append(Component.literal("Changelog/Discord ")
                         .setStyle(Style.EMPTY
-                                .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "c"))
+                                .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://discord.gg/JBFNW3wdTm"))
                                 .withColor(parseTextColor(discordColor))
                                 .withUnderlined(true)))
                 .append(Component.literal(" (support, updates)"));
