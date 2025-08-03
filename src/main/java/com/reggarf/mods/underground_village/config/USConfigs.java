@@ -26,6 +26,20 @@ public class USConfigs extends PartitioningSerializer.GlobalData {
         @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
         @Comment("Maximum distance the structure pieces can be from the center (1 to 128)")
         public int maxDistanceFromCenter = 116;
+
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 30)
+        @Comment("Default size of the underground structure (from 1 to 30)")
+        public int waterstructureSize = 15;
+
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 128)
+        @Comment("Maximum distance the structure pieces can be from the center (1 to 128)")
+        public int watermaxDistanceFromCenter = 116;
+
+        @ConfigEntry.Gui.Tooltip
+        @Comment("Enable or disable the welcome message, Requires game restart after changing this setting.")
+        public Boolean ENABLE_IN_GAME_MESSAGE = true;
     }
 }
 

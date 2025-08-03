@@ -1,0 +1,29 @@
+--------------------------------------------------------------------------------
+
+Command-Line:
+ - C:\Users\Anoop Singh\.jdks\temurin-21.0.7\bin\java.exe
+ - -jar
+ - C:\Users\Anoop Singh\.gradle\caches\modules-2\files-2.1\io.codechicken\DiffPatch\2.0.0.36\5b32f9baa0c0371c0dc80a3b88794960af0c6b44\DiffPatch-2.0.0.36-all.jar
+ - C:\Users\Anoop Singh\.gradle\caches\neoformruntime\intermediate_results\patch_21bf99f17a9074364104054f5177e7abb3234eac_output.zip
+ - C:\Users\Anoop Singh\.gradle\caches\modules-2\files-2.1\net.neoforged\neoforge\21.1.152\a36ee4a82fa9cd4938ad2e89b8cb93f9ac902bc4\neoforge-21.1.152-userdev.jar
+ - --prefix
+ - patches/
+ - --patch
+ - --archive
+ - ZIP
+ - --output
+ - ./output.zip
+ - --log-level
+ - WARN
+ - --mode
+ - OFFSET
+ - --archive-rejects
+ - ZIP
+ - --reject
+ - ./outputRejects.zip
+ - --base-path-prefix
+ - a/
+ - --modified-path-prefix
+ - b/
+--------------------------------------------------------------------------------
+

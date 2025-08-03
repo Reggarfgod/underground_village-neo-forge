@@ -3,6 +3,7 @@ package com.reggarf.mods.underground_village.register;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.reggarf.mods.underground_village.structure.UndergroundStructure;
+import com.reggarf.mods.underground_village.structure.UnderwaterStructures;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
@@ -21,6 +22,7 @@ public class USStructures {
 
 //  public static final RegistryObject<StructureType<?>, StructureType<UndergroundStructure>> UNDERGROUND_STRUCTURE = DEFERRED_REGISTRY_STRUCTURE.register("underground_structures", () -> explicitStructureTypeTyping(UndergroundStructure.CODEC));
     public static final RegistryObject<StructureType<UndergroundStructure>> UNDERGROUND_STRUCTURE = DEFERRED_REGISTRY_STRUCTURE.register("underground_structures", () -> explicitStructureTypeTyping(UndergroundStructure.CODEC));
+    public static final RegistryObject<StructureType<UnderwaterStructures>> UNDERWATER_STRUCTURES = DEFERRED_REGISTRY_STRUCTURE.register("underwater_structures", () -> explicitStructureTypeTyping(UnderwaterStructures.CODEC));
 
     private static <T extends Structure> StructureType<T> explicitStructureTypeTyping(Codec<T> structureCodec) {
         return () -> structureCodec;

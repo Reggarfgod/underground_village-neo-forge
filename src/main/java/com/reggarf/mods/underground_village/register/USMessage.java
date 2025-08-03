@@ -1,7 +1,6 @@
 package com.reggarf.mods.underground_village.register;
 
-// ===================== Imports =====================
-
+import com.reggarf.mods.underground_village.Underground_village;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.network.chat.ClickEvent;
 import net.minecraft.network.chat.Component;
@@ -14,24 +13,19 @@ import net.minecraftforge.fml.common.Mod;
 
 import static net.minecraft.network.chat.TextColor.fromRgb;
 
-// ===================== Main Mod Event Handler =====================
 @Mod.EventBusSubscriber
 public class USMessage {
 
-    // ===================== Configuration =====================
-    public static boolean enabled = true;
-
-    // Text colors (hex codes)
+    //public static boolean enabled = true;
     public static String titleColor = "DDA0FF";
     public static String zapColor = "00FFFF";
     public static String discordColor = "5599FF";
     public static String hostingColor = "00FFAA";
     public static String disableColor = "00FF66";
     public static String githubColor = "A9A9A9";
-    // ===================== Player Join Event =====================
     @SubscribeEvent
     public static void onPlayerJoin(PlayerEvent.PlayerLoggedInEvent event) {
-        if (!(event.getEntity() instanceof ServerPlayer player) || !enabled) return;
+        if (!(event.getEntity() instanceof ServerPlayer player) || !Underground_village.CONFIG.common.ENABLE_IN_GAME_MESSAGE) return;
 
         CompoundTag persistentData = player.getPersistentData();
         CompoundTag igData = persistentData.getCompound(ServerPlayer.PERSISTED_NBT_TAG);
@@ -44,11 +38,10 @@ public class USMessage {
         }
     }
 
-    // ===================== Styled Message Sender =====================
     private static void sendStyledMessages(ServerPlayer player) {
         // Title message
-        Component title = Component.literal("Hello, thank you for downloading ")
-                .append(Component.literal("Stoneholm, Underground village")
+        Component title = Component.literal("Hello! Join our Discord for the full changelog, or check it out on GitHub. And Thank you for downloading! ")
+                .append(Component.literal("Underground Villages, Stoneholm")
                         .setStyle(Style.EMPTY.withColor(parseTextColor(titleColor))));
 
         // Blank line for spacing
@@ -56,9 +49,9 @@ public class USMessage {
 
         // Discord CTA
         Component discord = Component.literal(" - ")
-                .append(Component.literal("Join our Discord ")
+                .append(Component.literal("Changelog/Discord ")
                         .setStyle(Style.EMPTY
-                                .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "https://discord.com/invite/CN962KMpJk"))
+                                .withClickEvent(new ClickEvent(ClickEvent.Action.OPEN_URL, "c"))
                                 .withColor(parseTextColor(discordColor))
                                 .withUnderlined(true)))
                 .append(Component.literal(" (support, updates)"));

@@ -1,7 +1,7 @@
 {
   "biomes": "#underground_village:has_structure/underground_village",
   "adapt_noise": false,
-  "liquid_settings": "ignore_waterlogging",
+  
   "spawn_overrides": {},
   "type": "underground_village:underground_structures",
   "start_pool": "stoneholm:start_pool",

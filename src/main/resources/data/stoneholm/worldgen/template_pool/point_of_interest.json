@@ -32,13 +32,39 @@
     {
       "weight": 140,
       "element": {
+        "location": "stoneholm:poi/v4/sidebed_bedroom",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 140,
+      "element": {
+        "location": "stoneholm:poi/v4/double_barrack",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 140,
+      "element": {
         "location": "stoneholm:poi/barrack",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
       }
     },
-
+    {
+      "weight": 70,
+      "element": {
+        "location": "stoneholm:poi/v4/founten",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
     {
       "weight": 45,
       "element": {
