@@ -1,44 +1,47 @@
 package com.reggarf.mods.underground_village.structureplacement;
 
-
 import com.mojang.serialization.Codec;
+import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+
 import com.reggarf.mods.underground_village.register.USStructurePlacements;
-import net.minecraft.core.Vec3i;
-import net.minecraft.util.ExtraCodecs;
-import net.minecraft.world.level.ChunkPos;
-import net.minecraft.world.level.chunk.ChunkGeneratorStructureState;
-import net.minecraft.world.level.levelgen.structure.placement.RandomSpreadStructurePlacement;
-import net.minecraft.world.level.levelgen.structure.placement.RandomSpreadType;
-import net.minecraft.world.level.levelgen.structure.placement.StructurePlacement;
-import net.minecraft.world.level.levelgen.structure.placement.StructurePlacementType;
+import net.minecraft.util.dynamic.Codecs;
+import net.minecraft.util.math.ChunkPos;
+import net.minecraft.util.math.Vec3i;
+import net.minecraft.world.gen.chunk.placement.RandomSpreadStructurePlacement;
+import net.minecraft.world.gen.chunk.placement.SpreadType;
+import net.minecraft.world.gen.chunk.placement.StructurePlacement;
+import net.minecraft.world.gen.chunk.placement.StructurePlacementCalculator;
+import net.minecraft.world.gen.chunk.placement.StructurePlacementType;
 
 import java.util.Optional;
 
 public class DistanceBasedStructurePlacement extends RandomSpreadStructurePlacement {
 
-    public static final Codec<DistanceBasedStructurePlacement> CODEC = RecordCodecBuilder.create((instance) -> instance.group(
-            Vec3i.offsetCodec(16).optionalFieldOf("locate_offset", Vec3i.ZERO).forGetter(DistanceBasedStructurePlacement::locateOffset),
-            StructurePlacement.FrequencyReductionMethod.CODEC.optionalFieldOf("frequency_reduction_method", StructurePlacement.FrequencyReductionMethod.DEFAULT).forGetter(DistanceBasedStructurePlacement::frequencyReductionMethod),
-            Codec.floatRange(0.0F, 1.0F).optionalFieldOf("frequency", 1.0F).forGetter(DistanceBasedStructurePlacement::frequency),
-            ExtraCodecs.NON_NEGATIVE_INT.fieldOf("salt").forGetter(DistanceBasedStructurePlacement::salt),
-            StructurePlacement.ExclusionZone.CODEC.optionalFieldOf("exclusion_zone").forGetter(DistanceBasedStructurePlacement::exclusionZone),
-            Codec.intRange(0, Integer.MAX_VALUE).fieldOf("spacing").forGetter(DistanceBasedStructurePlacement::spacing),
-            Codec.intRange(0, Integer.MAX_VALUE).fieldOf("separation").forGetter(DistanceBasedStructurePlacement::separation),
-            RandomSpreadType.CODEC.optionalFieldOf("spread_type", RandomSpreadType.LINEAR).forGetter(DistanceBasedStructurePlacement::spreadType),
+    // Special codec where we tacked on a "min_distance_from_world_origin" field so
+    // we can now have structures spawn based on distance from world center.
+    public static final MapCodec<DistanceBasedStructurePlacement> CODEC = RecordCodecBuilder.mapCodec((instance) -> instance.group(
+            Vec3i.createOffsetCodec(16).optionalFieldOf("locate_offset", Vec3i.ZERO).forGetter(DistanceBasedStructurePlacement::getLocateOffset),
+            FrequencyReductionMethod.CODEC.optionalFieldOf("frequency_reduction_method", FrequencyReductionMethod.DEFAULT).forGetter(DistanceBasedStructurePlacement::getFrequencyReductionMethod),
+            Codec.floatRange(0.0F, 1.0F).optionalFieldOf("frequency", 1.0F).forGetter(DistanceBasedStructurePlacement::getFrequency),
+            Codecs.NONNEGATIVE_INT.fieldOf("salt").forGetter(DistanceBasedStructurePlacement::getSalt),
+            ExclusionZone.CODEC.optionalFieldOf("exclusion_zone").forGetter(DistanceBasedStructurePlacement::getExclusionZone),
+            Codec.intRange(0, Integer.MAX_VALUE).fieldOf("spacing").forGetter(DistanceBasedStructurePlacement::getSpacing),
+            Codec.intRange(0, Integer.MAX_VALUE).fieldOf("separation").forGetter(DistanceBasedStructurePlacement::getSeparation),
+            SpreadType.CODEC.optionalFieldOf("spread_type", SpreadType.LINEAR).forGetter(DistanceBasedStructurePlacement::getSpreadType),
             Codec.intRange(0, Integer.MAX_VALUE).optionalFieldOf("min_distance_from_world_origin").forGetter(DistanceBasedStructurePlacement::minDistanceFromWorldOrigin)
     ).apply(instance, instance.stable(DistanceBasedStructurePlacement::new)));
 
     private final Optional<Integer> minDistanceFromWorldOrigin;
 
     public DistanceBasedStructurePlacement(Vec3i locationOffset,
-                                           StructurePlacement.FrequencyReductionMethod frequencyReductionMethod,
+                                           FrequencyReductionMethod frequencyReductionMethod,
                                            float frequency,
                                            int salt,
                                            Optional<ExclusionZone> exclusionZone,
                                            int spacing,
                                            int separation,
-                                           RandomSpreadType spreadType,
+                                           SpreadType spreadType,
                                            Optional<Integer> minDistanceFromWorldOrigin
     ) {
         super(locationOffset, frequencyReductionMethod, frequency, salt, exclusionZone, spacing, separation, spreadType);
@@ -59,8 +62,13 @@ public class DistanceBasedStructurePlacement extends RandomSpreadStructurePlacem
         return this.minDistanceFromWorldOrigin;
     }
 
+    // Override this method to add coordinate checking.
+    // The x and z here is in chunk positions.
+    // What we do is we check if the structure is too close to world center and if so, return false.
+    // Otherwise, if far enough away, run the normal structure position choosing code.
+    // When this returns true, the structure's type class will be called to see if the structure layout can be made.
     @Override
-    protected boolean isPlacementChunk(ChunkGeneratorStructureState chunkGeneratorStructureState, int x, int z) {
+    protected boolean isStartChunk(StructurePlacementCalculator structurePlacementCalculator, int x, int z) {
         if (minDistanceFromWorldOrigin.isPresent()) {
             // Convert chunk position to block position.
             long xBlockPos = x * 16L;
@@ -72,13 +80,13 @@ public class DistanceBasedStructurePlacement extends RandomSpreadStructurePlacem
             }
         }
 
-        ChunkPos chunkpos = this.getPotentialStructureChunk(chunkGeneratorStructureState.getLevelSeed(), x, z);
+        ChunkPos chunkpos = this.getStartChunk(structurePlacementCalculator.getStructureSeed(), x, z);
         return chunkpos.x == x && chunkpos.z == z;
     }
 
     @Override
-    public StructurePlacementType<?> type() {
-        return USStructurePlacements.DISTANCE_BASED_STRUCTURE_PLACEMENT.get();
+    public StructurePlacementType<?> getType() {
+        return USStructurePlacements.DISTANCE_BASED_STRUCTURE_PLACEMENT;
     }
 
 }
