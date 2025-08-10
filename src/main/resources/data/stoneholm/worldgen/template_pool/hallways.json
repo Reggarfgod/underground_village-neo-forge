@@ -21,9 +21,18 @@
       }
     },
     {
-      "weight": 2,
+      "weight": 1,
       "element": {
         "location": "stoneholm:hallways/hallway_x",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 1,
+      "element": {
+        "location": "stoneholm:hallways/v4/hallway_x",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

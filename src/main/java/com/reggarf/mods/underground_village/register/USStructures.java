@@ -1,28 +1,28 @@
 package com.reggarf.mods.underground_village.register;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-import com.reggarf.mods.underground_village.structure.UndergroundStructure;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.level.levelgen.structure.Structure;
-import net.minecraft.world.level.levelgen.structure.StructureType;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
-
-import static com.reggarf.mods.underground_village.Underground_village.MODID;
+import com.reggarf.mods.underground_village.Underground_village;
+import com.reggarf.mods.underground_village.structure.UndergroundStructures;
+import com.reggarf.mods.underground_village.structure.UnderwaterStructures;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.structure.StructureType;
 
 public class USStructures {
 
+
+    public static StructureType<UndergroundStructures> UNDERGROUND_STRUCTURE;
+    public static StructureType<UnderwaterStructures> UNDERWATER_STRUCTURES ;
+
     /**
-     * We are using the Deferred Registry system to register our structure as this is the preferred way on NeoForge.
-     * This will handle registering the base structure for us at the correct time so we don't have to handle it ourselves.
+     * Registers the structure itself and sets what its path is. In this case, the
+     * structure will have the Identifier of structure_tutorial:sky_structures.
+     *
+     * It is always a good idea to register your Structures so that other mods and datapacks can
+     * use them too directly from the registries. It's great for mod/datapacks compatibility.
      */
-    public static final DeferredRegister<StructureType<?>> DEFERRED_REGISTRY_STRUCTURE = DeferredRegister.create(Registries.STRUCTURE_TYPE, MODID);
-
-//  public static final RegistryObject<StructureType<?>, StructureType<UndergroundStructure>> UNDERGROUND_STRUCTURE = DEFERRED_REGISTRY_STRUCTURE.register("underground_structures", () -> explicitStructureTypeTyping(UndergroundStructure.CODEC));
-    public static final RegistryObject<StructureType<UndergroundStructure>> UNDERGROUND_STRUCTURE = DEFERRED_REGISTRY_STRUCTURE.register("underground_structures", () -> explicitStructureTypeTyping(UndergroundStructure.CODEC));
-
-    private static <T extends Structure> StructureType<T> explicitStructureTypeTyping(Codec<T> structureCodec) {
-        return () -> structureCodec;
+    public static void registerStructureTypes() {
+        UNDERGROUND_STRUCTURE = Registry.register(net.minecraft.registry.Registries.STRUCTURE_TYPE, Identifier.of(Underground_village.MODID, "underground_structures"), () -> UndergroundStructures.CODEC);
+        UNDERWATER_STRUCTURES  = Registry.register(net.minecraft.registry.Registries.STRUCTURE_TYPE, Identifier.of(Underground_village.MODID, "underwater_structures"), () -> UnderwaterStructures.CODEC);
     }
+
 }

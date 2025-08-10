@@ -4,14 +4,14 @@ import com.mojang.datafixers.util.Either;
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
-import net.minecraft.core.Holder;
-import net.minecraft.core.HolderOwner;
-import net.minecraft.core.HolderSet;
-import net.minecraft.core.Registry;
-import net.minecraft.resources.HolderSetCodec;
-import net.minecraft.resources.ResourceKey;
-import net.minecraft.tags.TagKey;
-import net.minecraft.util.RandomSource;
+import net.minecraft.registry.Registry;
+import net.minecraft.registry.RegistryKey;
+import net.minecraft.registry.entry.RegistryEntry;
+import net.minecraft.registry.entry.RegistryEntryList;
+import net.minecraft.registry.entry.RegistryEntryListCodec;
+import net.minecraft.registry.entry.RegistryEntryOwner;
+import net.minecraft.registry.tag.TagKey;
+import net.minecraft.util.math.random.Random;
 
 import java.util.Iterator;
 import java.util.List;
@@ -25,30 +25,30 @@ import java.util.stream.Stream;
  * You can copy and paste this to your project. You do not need to make any changes here.
  * Simply use this in your structure's codec to replace the biomes HolderSet field. See OceanStructures.java for an example of usage.
  */
-public class FilterHolderSet<T> implements HolderSet<T> {
-    public static <T> MapCodec<FilterHolderSet<T>> codec(ResourceKey<? extends Registry<T>> registryKey, Codec<Holder<T>> holderCodec, boolean forceList) {
+public class FilterHolderSet<T> implements RegistryEntryList<T> {
+    public static <T> MapCodec<FilterHolderSet<T>> codec(RegistryKey<? extends Registry<T>> registryKey, Codec<RegistryEntry<T>> holderCodec, boolean forceList) {
         return RecordCodecBuilder.mapCodec(
                 builder -> builder
                         .group(
-                                HolderSetCodec.create(registryKey, holderCodec, forceList).fieldOf("base").forGetter(FilterHolderSet::base),
-                                HolderSetCodec.create(registryKey, holderCodec, forceList).fieldOf("filter").forGetter(FilterHolderSet::filter))
+                                RegistryEntryListCodec.create(registryKey, holderCodec, forceList).fieldOf("base").forGetter(FilterHolderSet::base),
+                                RegistryEntryListCodec.create(registryKey, holderCodec, forceList).fieldOf("filter").forGetter(FilterHolderSet::filter))
                         .apply(builder, FilterHolderSet::new));
     }
 
-    private final HolderSet<T> base;
-    private final HolderSet<T> filter;
+    private final RegistryEntryList<T> base;
+    private final RegistryEntryList<T> filter;
 
-    private Set<Holder<T>> set = null;
-    private List<Holder<T>> list = null;
+    private Set<RegistryEntry<T>> set = null;
+    private List<RegistryEntry<T>> list = null;
 
-    public HolderSet<T> base() {
+    public RegistryEntryList<T> base() {
         return this.base;
     }
-    public HolderSet<T> filter() {
+    public RegistryEntryList<T> filter() {
         return this.filter;
     }
 
-    public FilterHolderSet(HolderSet<T> base, HolderSet<T> filter) {
+    public FilterHolderSet(RegistryEntryList<T> base, RegistryEntryList<T> filter) {
         this.base = base;
         this.filter = filter;
     }
@@ -56,17 +56,17 @@ public class FilterHolderSet<T> implements HolderSet<T> {
     /**
      * {@return immutable Set of filtered Holders}
      */
-    protected Set<Holder<T>> createSet() {
+    protected Set<RegistryEntry<T>> createSet() {
         return this.base
                 .stream()
                 .filter(holder -> !this.filter.contains(holder))
                 .collect(Collectors.toSet());
     }
 
-    public Set<Holder<T>> getSet() {
-        Set<Holder<T>> thisSet = this.set;
+    public Set<RegistryEntry<T>> getSet() {
+        Set<RegistryEntry<T>> thisSet = this.set;
         if (thisSet == null) {
-            Set<Holder<T>> set = this.createSet();
+            Set<RegistryEntry<T>> set = this.createSet();
             this.set = set;
             return set;
         } else {
@@ -74,10 +74,10 @@ public class FilterHolderSet<T> implements HolderSet<T> {
         }
     }
 
-    public List<Holder<T>> getList() {
-        List<Holder<T>> thisList = this.list;
+    public List<RegistryEntry<T>> getList() {
+        List<RegistryEntry<T>> thisList = this.list;
         if (thisList == null) {
-            List<Holder<T>> list = List.copyOf(this.getSet());
+            List<RegistryEntry<T>> list = List.copyOf(this.getSet());
             this.list = list;
             return list;
         } else {
@@ -86,7 +86,7 @@ public class FilterHolderSet<T> implements HolderSet<T> {
     }
 
     @Override
-    public Stream<Holder<T>> stream() {
+    public Stream<RegistryEntry<T>> stream() {
         return this.getList().stream();
     }
 
@@ -96,13 +96,13 @@ public class FilterHolderSet<T> implements HolderSet<T> {
     }
 
     @Override
-    public Either<TagKey<T>, List<Holder<T>>> unwrap() {
+    public Either<TagKey<T>, List<RegistryEntry<T>>> getStorage() {
         return Either.right(this.getList());
     }
 
     @Override
-    public Optional<Holder<T>> getRandomElement(RandomSource rand) {
-        List<Holder<T>> list = this.getList();
+    public Optional<RegistryEntry<T>> getRandom(Random rand) {
+        List<RegistryEntry<T>> list = this.getList();
         int size = list.size();
         return size > 0
                 ? Optional.of(list.get(rand.nextInt(size)))
@@ -110,27 +110,27 @@ public class FilterHolderSet<T> implements HolderSet<T> {
     }
 
     @Override
-    public Holder<T> get(int i) {
+    public RegistryEntry<T> get(int i) {
         return this.getList().get(i);
     }
 
     @Override
-    public boolean contains(Holder<T> holder) {
+    public boolean contains(RegistryEntry<T> holder) {
         return this.getSet().contains(holder);
     }
 
     @Override
-    public boolean canSerializeIn(HolderOwner<T> holderOwner) {
-        return this.base.canSerializeIn(holderOwner) && this.filter.canSerializeIn(holderOwner);
+    public boolean ownerEquals(RegistryEntryOwner<T> holderOwner) {
+        return this.base.ownerEquals(holderOwner) && this.filter.ownerEquals(holderOwner);
     }
 
     @Override
-    public Optional<TagKey<T>> unwrapKey() {
+    public Optional<TagKey<T>> getTagKey() {
         return Optional.empty();
     }
 
     @Override
-    public Iterator<Holder<T>> iterator() {
+    public Iterator<RegistryEntry<T>> iterator() {
         return this.getList().iterator();
     }
 }

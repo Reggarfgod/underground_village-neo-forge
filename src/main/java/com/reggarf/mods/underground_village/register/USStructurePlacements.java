@@ -1,26 +1,17 @@
 package com.reggarf.mods.underground_village.register;
 
-import com.mojang.serialization.Codec;
-import com.mojang.serialization.MapCodec;
-
+import com.reggarf.mods.underground_village.Underground_village;
 import com.reggarf.mods.underground_village.structureplacement.DistanceBasedStructurePlacement;
-import net.minecraft.core.registries.Registries;
-import net.minecraft.world.level.levelgen.structure.placement.StructurePlacement;
-import net.minecraft.world.level.levelgen.structure.placement.StructurePlacementType;
-import net.minecraftforge.registries.DeferredRegister;
-import net.minecraftforge.registries.RegistryObject;
-
-
-import static com.reggarf.mods.underground_village.Underground_village.MODID;
+import net.minecraft.registry.Registry;
+import net.minecraft.util.Identifier;
+import net.minecraft.world.gen.chunk.placement.StructurePlacementType;
 
 public class USStructurePlacements {
 
-    public static final DeferredRegister<StructurePlacementType<?>> DEFERRED_REGISTRY_STRUCTURE_PLACEMENT_TYPE = DeferredRegister.create(Registries.STRUCTURE_PLACEMENT, MODID);
+    public static StructurePlacementType<DistanceBasedStructurePlacement> DISTANCE_BASED_STRUCTURE_PLACEMENT;
 
-    //public static final DeferredHolder<StructurePlacementType<?>, StructurePlacementType<DistanceBasedStructurePlacement>> DISTANCE_BASED_STRUCTURE_PLACEMENT = DEFERRED_REGISTRY_STRUCTURE_PLACEMENT_TYPE.register("distance_based_structure_placement", () -> explicitStructureTypeTyping(DistanceBasedStructurePlacement.CODEC));
-    public static final RegistryObject<StructurePlacementType<DistanceBasedStructurePlacement>> DISTANCE_BASED_STRUCTURE_PLACEMENT = DEFERRED_REGISTRY_STRUCTURE_PLACEMENT_TYPE.register("distance_based_structure_placement", () -> explicitStructureTypeTyping(DistanceBasedStructurePlacement.CODEC));
 
-    private static <T extends StructurePlacement> StructurePlacementType<T> explicitStructureTypeTyping(Codec<T> structurePlacementTypeCodec) {
-        return () -> structurePlacementTypeCodec;
+    public static void registerStructurePlacementTypes() {
+        DISTANCE_BASED_STRUCTURE_PLACEMENT  = Registry.register(net.minecraft.registry.Registries.STRUCTURE_PLACEMENT, Identifier.of(Underground_village.MODID, "distance_based_structure_placement"), () -> DistanceBasedStructurePlacement.CODEC);
     }
 }

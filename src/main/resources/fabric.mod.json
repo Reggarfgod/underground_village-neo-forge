@@ -9,7 +9,7 @@
     "homepage": "https://www.curseforge.com/minecraft/mc-mods/underground-villages-stoneholm",
     "sources": "https://github.com/Reggarfgod/underground_village-neo-forge",
     "issues": "https://github.com/Reggarfgod/underground_village-neo-forge/issues",
-    "discord": "https://discord.gg/CN962KMpJk "
+    "discord": "https://discord.gg/JBFNW3wdTm"
   },
   "license": "MIT",
   "icon": "icon.png",
@@ -35,7 +35,8 @@
     "fabricloader": ">=${loader_version}",
     "fabric": "*",
     "minecraft": "${minecraft_version}",
-    "cloth-config2": "*"
+    "cloth-config2": "*",
+    "modmenu": "*"
   },
   "custom": {
     "catalogue": {
