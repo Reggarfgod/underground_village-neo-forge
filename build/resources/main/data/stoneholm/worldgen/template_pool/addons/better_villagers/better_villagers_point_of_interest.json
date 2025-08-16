@@ -1,0 +1,33 @@
+{
+  "name": "stoneholm:addons/better_villagers/better_villagers_point_of_interest",
+  "fallback": "stoneholm:end",
+  "elements": [
+    {
+      "weight": 40,
+      "element": {
+        "location": "stoneholm:addons/better_villager/poi/andesite_worker",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 40,
+      "element": {
+        "location": "stoneholm:addons/better_villager/poi/brass_worker",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 40,
+      "element": {
+        "location": "stoneholm:addons/better_villager/poi/copper_worker",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}

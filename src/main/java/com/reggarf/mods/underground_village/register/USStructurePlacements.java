@@ -1,7 +1,6 @@
 package com.reggarf.mods.underground_village.register;
 
 import com.mojang.serialization.MapCodec;
-
 import com.reggarf.mods.underground_village.structureplacement.DistanceBasedStructurePlacement;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.placement.StructurePlacement;

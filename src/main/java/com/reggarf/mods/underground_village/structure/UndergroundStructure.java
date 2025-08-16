@@ -70,7 +70,7 @@ public class UndergroundStructure extends Structure {
 //    private static boolean extraSpawningChecks(GenerationContext context) {
 //        return true;
 //    }
-private static boolean extraSpawningChecks(Structure.GenerationContext context) {
+private static boolean extraSpawningChecks(GenerationContext context) {
     ChunkPos chunkPos = context.chunkPos();
     int x = chunkPos.getMiddleBlockX();
     int z = chunkPos.getMiddleBlockZ();

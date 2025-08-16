@@ -1,8 +1,8 @@
 package com.reggarf.mods.underground_village.register;
 
 import com.mojang.serialization.MapCodec;
-import com.reggarf.mods.underground_village.structure.UnderwaterStructures;
 import com.reggarf.mods.underground_village.structure.UndergroundStructure;
+import com.reggarf.mods.underground_village.structure.UnderwaterStructures;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;

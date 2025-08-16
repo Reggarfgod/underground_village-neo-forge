@@ -2,7 +2,7 @@ package com.reggarf.mods.underground_village;
 
 import com.mojang.logging.LogUtils;
 import com.reggarf.mods.underground_village.config.USConfigs;
-import com.reggarf.mods.underground_village.register.USMessageHandler;
+
 import com.reggarf.mods.underground_village.register.USStructurePlacements;
 import com.reggarf.mods.underground_village.register.USStructures;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -34,6 +34,6 @@ public class Underground_village {
         AutoConfig.register(USConfigs.class, PartitioningSerializer.wrap(JanksonConfigSerializer::new));
         CONFIG = AutoConfig.getConfigHolder(USConfigs.class).getConfig();
         /// ///////////////////////////////////////////////////
-        NeoForge.EVENT_BUS.register(USMessageHandler.class);
+        //NeoForge.EVENT_BUS.register(USMessageHandler.class);
     }
 }

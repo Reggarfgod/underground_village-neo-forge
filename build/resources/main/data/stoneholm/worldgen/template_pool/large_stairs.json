@@ -1,0 +1,43 @@
+{
+  "name": "stoneholm:stairs",
+  "fallback": "stoneholm:end",
+  "elements": [
+    {
+      "weight": 10,
+      "element": {
+        "location": "stoneholm:stairs/v4/01",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "stoneholm:stairs/v4/02",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+
+    {
+      "weight": 10,
+      "element": {
+        "location": "stoneholm:stairs/v4/03",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 10,
+      "element": {
+        "location": "stoneholm:stairs/v4/04",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    }
+  ]
+}
