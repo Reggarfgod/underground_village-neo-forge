@@ -10,6 +10,6 @@
 
     "spacing": 32,
     "separation": 8,
-    "type": "underground_village:distance_based_structure_placement"
+    "type": "minecraft:random_spread"
   }
 }

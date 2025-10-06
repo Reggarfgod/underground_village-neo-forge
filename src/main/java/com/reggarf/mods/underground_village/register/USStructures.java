@@ -1,9 +1,8 @@
 package com.reggarf.mods.underground_village.register;
 
-import com.mojang.serialization.Codec;
 import com.mojang.serialization.MapCodec;
-import com.reggarf.mods.underground_village.structure.UndergroundStructure;
 import com.reggarf.mods.underground_village.structure.UnderwaterStructures;
+import com.reggarf.mods.underground_village.structure.UndergroundStructure;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.Structure;
 import net.minecraft.world.level.levelgen.structure.StructureType;
@@ -20,11 +19,18 @@ public class USStructures {
      */
     public static final DeferredRegister<StructureType<?>> DEFERRED_REGISTRY_STRUCTURE = DeferredRegister.create(Registries.STRUCTURE_TYPE, MODID);
 
-//  public static final RegistryObject<StructureType<?>, StructureType<UndergroundStructure>> UNDERGROUND_STRUCTURE = DEFERRED_REGISTRY_STRUCTURE.register("underground_structures", () -> explicitStructureTypeTyping(UndergroundStructure.CODEC));
+    /**
+     * Registers the base structure itself and sets what its path is. In this case,
+     * this base structure will have the resourcelocation of structure_tutorial:sky_structures.
+     */
     public static final RegistryObject<StructureType<UndergroundStructure>> UNDERGROUND_STRUCTURE = DEFERRED_REGISTRY_STRUCTURE.register("underground_structures", () -> explicitStructureTypeTyping(UndergroundStructure.CODEC));
     public static final RegistryObject<StructureType<UnderwaterStructures>> UNDERWATER_STRUCTURES = DEFERRED_REGISTRY_STRUCTURE.register("underwater_structures", () -> explicitStructureTypeTyping(UnderwaterStructures.CODEC));
-
-    private static <T extends Structure> StructureType<T> explicitStructureTypeTyping(Codec<T> structureCodec) {
+/**
+     * Originally, I had a double lambda ()->()-> for the RegistryObject line above, but it turns out that
+     * some IDEs cannot resolve the typing correctly. This method explicitly states what the return type
+     * is so that the IDE can put it into the DeferredRegistry properly.
+     */
+    private static <T extends Structure> StructureType<T> explicitStructureTypeTyping(MapCodec<T> structureCodec) {
         return () -> structureCodec;
     }
 }

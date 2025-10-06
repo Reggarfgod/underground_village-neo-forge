@@ -11,13 +11,15 @@ import net.minecraftforge.event.entity.player.PlayerEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 
+
 import static net.minecraft.network.chat.TextColor.fromRgb;
 
 @Mod.EventBusSubscriber
-public class USMessage {
+public class USMessageHandler {
 
     //public static boolean enabled = true;
-    public static String titleColor = "DDA0FF";
+
+    public static String titleColor = "FEF250";
     public static String zapColor = "00FFFF";
     public static String discordColor = "5599FF";
     public static String hostingColor = "00FFAA";
@@ -41,7 +43,7 @@ public class USMessage {
     private static void sendStyledMessages(ServerPlayer player) {
         // Title message
         Component title = Component.literal("Hello! Join our Discord for the full changelog, or check it out on GitHub. And Thank you for downloading! ")
-                .append(Component.literal("Underground Villages, Stoneholm")
+                .append(Component.literal("Underground Village,StoneHolm")
                         .setStyle(Style.EMPTY.withColor(parseTextColor(titleColor))));
 
         // Blank line for spacing
@@ -94,7 +96,6 @@ public class USMessage {
 
     }
 
-    // ===================== Hex Color Parser =====================
     private static TextColor parseTextColor(String hex) {
         try {
             if (hex.startsWith("#")) hex = hex.substring(1);

@@ -2,7 +2,7 @@ package com.reggarf.mods.underground_village;
 
 import com.mojang.logging.LogUtils;
 import com.reggarf.mods.underground_village.config.USConfigs;
-import com.reggarf.mods.underground_village.register.USStructurePlacements;
+import com.reggarf.mods.underground_village.register.USMessageHandler;
 import com.reggarf.mods.underground_village.register.USStructures;
 import me.shedaniel.autoconfig.AutoConfig;
 import me.shedaniel.autoconfig.serializer.JanksonConfigSerializer;
@@ -13,7 +13,6 @@ import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fml.ModContainer;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.common.Mod;
-import net.minecraftforge.fml.config.ModConfig;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 import org.slf4j.Logger;
 
@@ -26,7 +25,7 @@ public class Underground_village {
     public Underground_village() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
         USStructures.DEFERRED_REGISTRY_STRUCTURE.register(modEventBus);
-        USStructurePlacements.DEFERRED_REGISTRY_STRUCTURE_PLACEMENT_TYPE.register(modEventBus);
+        //USStructurePlacements.DEFERRED_REGISTRY_STRUCTURE_PLACEMENT_TYPE.register(modEventBus);
         init();
         registerConfig();
     }
