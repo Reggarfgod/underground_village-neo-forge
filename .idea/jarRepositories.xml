@@ -12,14 +12,64 @@
       <option name="url" value="https://repository.jboss.org/nexus/content/repositories/public/" />
     </remote-repository>
     <remote-repository>
+      <option name="id" value="Mojang" />
+      <option name="name" value="Mojang" />
+      <option name="url" value="https://libraries.minecraft.net/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="MavenRepo" />
+      <option name="name" value="MavenRepo" />
+      <option name="url" value="https://repo.maven.apache.org/maven2/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Sponge" />
+      <option name="name" value="Sponge" />
+      <option name="url" value="https://repo.spongepowered.org/repository/maven-public" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="ParchmentMC" />
+      <option name="name" value="ParchmentMC" />
+      <option name="url" value="https://maven.parchmentmc.org/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="NeoForge" />
+      <option name="name" value="NeoForge" />
+      <option name="url" value="https://maven.neoforged.net/releases" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="BlameJared" />
+      <option name="name" value="BlameJared" />
+      <option name="url" value="https://maven.blamejared.com" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="LoomLocalRemappedMods" />
+      <option name="name" value="LoomLocalRemappedMods" />
+      <option name="url" value="file:/$PROJECT_DIR$/.gradle/loom-cache/remapped_mods/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="LoomGlobalMinecraft" />
+      <option name="name" value="LoomGlobalMinecraft" />
+      <option name="url" value="file:/C:/Users/Anoop%20Singh/.gradle/caches/fabric-loom/minecraftMaven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="LoomLocalMinecraft" />
+      <option name="name" value="LoomLocalMinecraft" />
+      <option name="url" value="file:/$PROJECT_DIR$/.gradle/loom-cache/minecraftMaven/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="Fabric" />
+      <option name="name" value="Fabric" />
+      <option name="url" value="https://maven.fabricmc.net/" />
+    </remote-repository>
+    <remote-repository>
+      <option name="id" value="maven" />
+      <option name="name" value="maven" />
+      <option name="url" value="https://maven.minecraftforge.net/" />
+    </remote-repository>
+    <remote-repository>
       <option name="id" value="Mojang Meta" />
       <option name="name" value="Mojang Meta" />
       <option name="url" value="https://maven.neoforged.net/mojang-meta/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="Mojang Minecraft Libraries" />
-      <option name="name" value="Mojang Minecraft Libraries" />
-      <option name="url" value="https://libraries.minecraft.net/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="NeoForged Releases" />
@@ -29,7 +79,7 @@
     <remote-repository>
       <option name="id" value="MavenLocal" />
       <option name="name" value="MavenLocal" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../../Anoop%20Singh/.m2/repository/" />
+      <option name="url" value="file:/C:/Users/Anoop%20Singh/.m2/repository/" />
     </remote-repository>
     <remote-repository>
       <option name="id" value="maven" />
@@ -37,29 +87,9 @@
       <option name="url" value="https://cursemaven.com" />
     </remote-repository>
     <remote-repository>
-      <option name="id" value="maven" />
-      <option name="name" value="maven" />
-      <option name="url" value="https://maven.createmod.net" />
-    </remote-repository>
-    <remote-repository>
       <option name="id" value="maven2" />
       <option name="name" value="maven2" />
-      <option name="url" value="https://mvn.devos.one/snapshots" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="maven3" />
-      <option name="name" value="maven3" />
-      <option name="url" value="https://raw.githubusercontent.com/Fuzss/modresources/main/maven/" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="MavenLocal" />
-      <option name="name" value="MavenLocal" />
-      <option name="url" value="file:/$PROJECT_DIR$/../../../Anoop%20Singh/.m2/repository" />
-    </remote-repository>
-    <remote-repository>
-      <option name="id" value="MavenLocal" />
-      <option name="name" value="MavenLocal" />
-      <option name="url" value="file:/C:/Users/Anoop%20Singh/.m2/repository" />
+      <option name="url" value="https://maven.terraformersmc.com/" />
     </remote-repository>
   </component>
 </project>

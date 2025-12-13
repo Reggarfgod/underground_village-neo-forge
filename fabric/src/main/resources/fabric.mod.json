@@ -1,0 +1,41 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/underground-villages-stoneholm",
+    "sources": "https://github.com/Reggarfgod/underground_village-neo-forge",
+    "issues": "https://github.com/Reggarfgod/Underground-Village/issues",
+    "discord": "https://discord.gg/JBFNW3wdTm"
+  },
+    "license": "${license}",
+    "environment": "*",
+    "entrypoints": {
+        "main": [
+          "com.reggarf.mods.underground_village.Underground_village"
+        ],
+      "modmenu": [
+        "com.reggarf.mods.underground_village.config.USMenuIntegration"
+      ]
+    },
+    "mixins": [
+        "${mod_id}.mixins.json",
+        "${mod_id}.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
+        "minecraft": "${minecraft_version}",
+        "java": ">=${java_version}",
+        "modmenu": "*"
+    },
+    "suggests": {
+        "another-mod": "*"
+    }
+}
+  
