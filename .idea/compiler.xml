@@ -17,13 +17,17 @@
         <module name="MultiLoader-Template.forge.main" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.6" />
+    <bytecodeTargetLevel target="21">
+      <module name="Underground-Village.buildSrc" target="21" />
+      <module name="Underground-Village.buildSrc.main" target="21" />
+      <module name="Underground-Village.buildSrc.test" target="21" />
+    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
-      <module name="MultiLoader-Template.fabric" options="-AoutRefMapFile=E:\MODS\Undergound-1.21.X\fabric\build\classes\java\main\underground_village.refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=E:\MODS\Undergound-1.21.X\fabric\build\loom-cache\mixin-map-loom.mappings.1_21_1.layered+hash.288375958-v2.main.tiny &quot;-AinMapFileNamedIntermediary=C:\Users\Anoop Singh\.gradle\caches\fabric-loom\1.21.1\loom.mappings.1_21_1.layered+hash.288375958-v2\mappings.tiny&quot;" />
-      <module name="MultiLoader-Template.fabric.main" options="-AoutRefMapFile=E:\MODS\Undergound-1.21.X\fabric\build\classes\java\main\underground_village.refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=E:\MODS\Undergound-1.21.X\fabric\build\loom-cache\mixin-map-loom.mappings.1_21_1.layered+hash.288375958-v2.main.tiny &quot;-AinMapFileNamedIntermediary=C:\Users\Anoop Singh\.gradle\caches\fabric-loom\1.21.1\loom.mappings.1_21_1.layered+hash.288375958-v2\mappings.tiny&quot;" />
-      <module name="MultiLoader-Template.fabric.test" options="-AoutRefMapFile=E:\MODS\Undergound-1.21.X\fabric\build\classes\java\test\test-underground_village.refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=E:\MODS\Undergound-1.21.X\fabric\build\loom-cache\mixin-map-loom.mappings.1_21_1.layered+hash.288375958-v2.test.tiny &quot;-AinMapFileNamedIntermediary=C:\Users\Anoop Singh\.gradle\caches\fabric-loom\1.21.1\loom.mappings.1_21_1.layered+hash.288375958-v2\mappings.tiny&quot;" />
+      <module name="MultiLoader-Template.fabric" options="-AoutRefMapFile=E:\MODS\Underground-Village\fabric\build\classes\java\main\underground_village.refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=E:\MODS\Underground-Village\fabric\build\loom-cache\mixin-map-loom.mappings.1_21_1.layered+hash.288375958-v2.main.tiny &quot;-AinMapFileNamedIntermediary=C:\Users\Anoop Singh\.gradle\caches\fabric-loom\1.21.1\loom.mappings.1_21_1.layered+hash.288375958-v2\mappings.tiny&quot;" />
+      <module name="MultiLoader-Template.fabric.main" options="-AoutRefMapFile=E:\MODS\Underground-Village\fabric\build\classes\java\main\underground_village.refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=E:\MODS\Underground-Village\fabric\build\loom-cache\mixin-map-loom.mappings.1_21_1.layered+hash.288375958-v2.main.tiny &quot;-AinMapFileNamedIntermediary=C:\Users\Anoop Singh\.gradle\caches\fabric-loom\1.21.1\loom.mappings.1_21_1.layered+hash.288375958-v2\mappings.tiny&quot;" />
+      <module name="MultiLoader-Template.fabric.test" options="-AoutRefMapFile=E:\MODS\Underground-Village\fabric\build\classes\java\test\test-underground_village.refmap.json -AdefaultObfuscationEnv=named:intermediary -Aquiet=true -AoutMapFileNamedIntermediary=E:\MODS\Underground-Village\fabric\build\loom-cache\mixin-map-loom.mappings.1_21_1.layered+hash.288375958-v2.test.tiny &quot;-AinMapFileNamedIntermediary=C:\Users\Anoop Singh\.gradle\caches\fabric-loom\1.21.1\loom.mappings.1_21_1.layered+hash.288375958-v2\mappings.tiny&quot;" />
     </option>
   </component>
 </project>

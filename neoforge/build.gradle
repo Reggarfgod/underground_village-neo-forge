@@ -49,5 +49,7 @@ repositories {
 }
 dependencies {
     implementation "curse.maven:cloth-config-348521:5729127"
+    implementation "curse.maven:building-gadgets-298187:6850515"
+    implementation "curse.maven:charging-gadgets-399757:5615790"
 }
 sourceSets.main.resources { srcDir 'src/generated/resources' }

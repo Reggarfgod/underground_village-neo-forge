@@ -1,0 +1,114 @@
+---- Minecraft Crash Report ----
+// Surprise! Haha. Well, this is awkward.
+
+Time: 2025-12-13 19:31:08
+Description: Mod loading failures have occurred; consult the issue messages for more details
+
+net.neoforged.neoforge.logging.CrashReportExtender$ModLoadingCrashException: Mod loading has failed
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Thread: Render thread
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.core.MappedRegistry.validateWrite(MappedRegistry.java:117) ~[neoforge-21.1.80-minecraft.jar%23183!/:?] {re:mixin,re:classloading,pl:mixin:A}
+-- Mod loading issue for: underground_village --
+Details:
+	Mod file: /E:/MODS/Undergound-1.21.X/neoforge/build/classes/java/main/
+	Failure message: Underground Village (underground_village) has failed to load correctly
+		java.lang.IllegalStateException: Registry is already frozen (trying to add key ResourceKey[minecraft:worldgen/structure_type / underground_village:underground_structures])
+	Mod version: 1.0.0
+	Mod issues URL: <No issues URL found>
+	Exception message: java.lang.IllegalStateException: Registry is already frozen (trying to add key ResourceKey[minecraft:worldgen/structure_type / underground_village:underground_structures])
+Stacktrace:
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.core.MappedRegistry.validateWrite(MappedRegistry.java:117) ~[neoforge-21.1.80-minecraft.jar%23183!/:?] {re:mixin,re:classloading,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.core.MappedRegistry.register(MappedRegistry.java:127) ~[neoforge-21.1.80-minecraft.jar%23183!/:?] {re:mixin,re:classloading,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.core.MappedRegistry.register(MappedRegistry.java:123) ~[neoforge-21.1.80-minecraft.jar%23183!/:?] {re:mixin,re:classloading,pl:mixin:A}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.core.Registry.register(Registry.java:129) ~[neoforge-21.1.80-minecraft.jar%23183!/:?] {re:classloading}
+	at TRANSFORMER/minecraft@1.21.1/net.minecraft.core.Registry.register(Registry.java:125) ~[neoforge-21.1.80-minecraft.jar%23183!/:?] {re:classloading}
+	at TRANSFORMER/underground_village@1.0.0/com.reggarf.mods.underground_village.register.USStructures.register(USStructures.java:27) ~[%23185!/:?] {re:classloading}
+	at TRANSFORMER/underground_village@1.0.0/com.reggarf.mods.underground_village.CommonClass.init(CommonClass.java:16) ~[%23185!/:?] {re:classloading}
+	at TRANSFORMER/underground_village@1.0.0/com.reggarf.mods.underground_village.Underground_village.<init>(Underground_village.java:16) ~[%23185!/:?] {re:classloading}
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[?:?] {}
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[?:?] {}
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[?:?] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.javafmlmod.FMLModContainer.constructMod(FMLModContainer.java:115) ~[loader-4.0.31.jar%23139!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModLoader.lambda$constructMods$3(ModLoader.java:153) ~[loader-4.0.31.jar%23139!/:4.0] {}
+	at MC-BOOTSTRAP/fml_loader@4.0.31/net.neoforged.fml.ModLoader.lambda$dispatchParallelTask$7(ModLoader.java:231) ~[loader-4.0.31.jar%23139!/:4.0] {}
+	at java.base/java.util.concurrent.CompletableFuture.uniHandle(CompletableFuture.java:934) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$UniHandle.tryFire(CompletableFuture.java:911) ~[?:?] {}
+	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:483) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:387) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1312) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1843) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1808) ~[?:?] {}
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:188) ~[?:?] {}
+
+
+-- System Details --
+Details:
+	Minecraft Version: 1.21.1
+	Minecraft Version ID: 1.21.1
+	Operating System: Windows 11 (amd64) version 10.0
+	Java Version: 21.0.9, Eclipse Adoptium
+	Java VM Version: OpenJDK 64-Bit Server VM (mixed mode, sharing), Eclipse Adoptium
+	Memory: 80200624 bytes (76 MiB) / 595591168 bytes (568 MiB) up to 8531214336 bytes (8136 MiB)
+	CPUs: 12
+	Processor Vendor: GenuineIntel
+	Processor Name: 12th Gen Intel(R) Core(TM) i5-12400
+	Identifier: Intel64 Family 6 Model 151 Stepping 2
+	Microarchitecture: Alder Lake
+	Frequency (GHz): 2.50
+	Number of physical packages: 1
+	Number of physical CPUs: 6
+	Number of logical CPUs: 12
+	Graphics card #0 name: NVIDIA GeForce RTX 5060
+	Graphics card #0 vendor: NVIDIA
+	Graphics card #0 VRAM (MiB): 8151.00
+	Graphics card #0 deviceId: VideoController1
+	Graphics card #0 versionInfo: 32.0.15.9144
+	Graphics card #1 name: Intel(R) UHD Graphics 730
+	Graphics card #1 vendor: Intel Corporation
+	Graphics card #1 VRAM (MiB): 2048.00
+	Graphics card #1 deviceId: VideoController2
+	Graphics card #1 versionInfo: 32.0.101.6129
+	Memory slot #0 capacity (MiB): 16384.00
+	Memory slot #0 clockSpeed (GHz): 2.67
+	Memory slot #0 type: DDR4
+	Memory slot #1 capacity (MiB): 16384.00
+	Memory slot #1 clockSpeed (GHz): 2.67
+	Memory slot #1 type: DDR4
+	Virtual memory max (MiB): 34585.11
+	Virtual memory used (MiB): 16026.37
+	Swap memory total (MiB): 2048.00
+	Swap memory used (MiB): 40.61
+	Space in storage for jna.tmpdir (MiB): <path not set>
+	Space in storage for org.lwjgl.system.SharedLibraryExtractPath (MiB): <path not set>
+	Space in storage for io.netty.native.workdir (MiB): <path not set>
+	Space in storage for java.io.tmpdir (MiB): available: 47245.54, total: 228164.00
+	Space in storage for workdir (MiB): available: 67703.50, total: 304677.00
+	JVM Flags: 0 total; 
+	ModLauncher: 11.0.4+main.d2e20e43
+	ModLauncher launch target: forgeclientuserdev
+	ModLauncher services: 
+		sponge-mixin-0.15.2+mixin.0.8.7.jar mixin PLUGINSERVICE 
+		loader-4.0.31.jar slf4jfixer PLUGINSERVICE 
+		loader-4.0.31.jar runtime_enum_extender PLUGINSERVICE 
+		at-modlauncher-10.0.1.jar accesstransformer PLUGINSERVICE 
+		loader-4.0.31.jar runtimedistcleaner PLUGINSERVICE 
+		modlauncher-11.0.4.jar mixin TRANSFORMATIONSERVICE 
+		modlauncher-11.0.4.jar fml TRANSFORMATIONSERVICE 
+	FML Language Providers: 
+		javafml@4.0
+		lowcodefml@4.0
+		minecraft@4.0
+	Mod List: 
+		cloth-config-348521-5729127.jar                   |Cloth Config v15 API          |cloth_config                  |15.0.140            |Manifest: NOSIGNATURE
+		neoforge-21.1.80-minecraft.jar                    |Minecraft                     |minecraft                     |1.21.1              |Manifest: NOSIGNATURE
+		neoforge-21.1.80-minecraft.jar                    |NeoForge                      |neoforge                      |21.1.80             |Manifest: NOSIGNATURE
+		main                                              |Underground Village           |underground_village           |1.0.0               |Manifest: NOSIGNATURE
+	Crash Report UUID: fd6a10a0-eb11-4312-868b-83c8cfb398f9
+	FML: 4.0.31
+	NeoForge: 21.1.80
