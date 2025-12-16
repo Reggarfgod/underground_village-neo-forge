@@ -5,7 +5,7 @@
     {
       "weight": 5,
       "element": {
-        "location": "stoneholm:highways/highway",
+        "location": "stoneholm:highways/v4/highway",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -14,7 +14,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "stoneholm:highways/highway_stairs",
+        "location": "stoneholm:highways/v4/highway_stairs",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -23,7 +23,7 @@
     {
       "weight": 3,
       "element": {
-        "location": "stoneholm:highways/corner",
+        "location": "stoneholm:highways/v4/corner",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -32,7 +32,7 @@
     {
       "weight": 6,
       "element": {
-        "location": "stoneholm:hall_to_highway",
+        "location": "stoneholm:v4/hall_to_highway",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
