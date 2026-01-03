@@ -33,7 +33,7 @@ public class UndergroundStructure extends Structure {
                     Codec.intRange(0, 30).fieldOf("size").forGetter(s -> s.size),
                     HeightProvider.CODEC.fieldOf("start_height").forGetter(s -> s.startHeight),
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(s -> s.projectStartToHeightmap),
-                    Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(s -> CommonClass.CONFIG.common.maxDistanceFromCenter),
+                    Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(s -> CommonClass.CONFIG.maxDistanceFromCenter),
                     DimensionPadding.CODEC.optionalFieldOf("dimension_padding", JigsawStructure.DEFAULT_DIMENSION_PADDING).forGetter(s -> s.dimensionPadding),
                     LiquidSettings.CODEC.optionalFieldOf("liquid_settings", LiquidSettings.IGNORE_WATERLOGGING).forGetter(s -> s.liquidSettings)
             ).apply(instance, UndergroundStructure::new));
@@ -59,10 +59,10 @@ public class UndergroundStructure extends Structure {
         super(settings);
         this.startPool = startPool;
         this.startJigsawName = startJigsawName;
-        this.size = CommonClass.CONFIG.common.structureSize;
+        this.size = CommonClass.CONFIG.structureSize;
         this.startHeight = startHeight;
         this.projectStartToHeightmap = projectStartToHeightmap;
-        this.maxDistanceFromCenter = CommonClass.CONFIG.common.maxDistanceFromCenter;
+        this.maxDistanceFromCenter = CommonClass.CONFIG.maxDistanceFromCenter;
         this.dimensionPadding = dimensionPadding;
         this.liquidSettings = liquidSettings;
     }
@@ -92,8 +92,8 @@ private static boolean extraSpawningChecks(GenerationContext context) {
         ChunkPos chunkPos = context.chunkPos();
         BlockPos blockPos = new BlockPos(chunkPos.getMinBlockX(), startY, chunkPos.getMinBlockZ());
 
-        int actualSize = CommonClass.CONFIG.common.structureSize;
-        int actualMaxDistance = CommonClass.CONFIG.common.maxDistanceFromCenter;
+        int actualSize = CommonClass.CONFIG.structureSize;
+        int actualMaxDistance = CommonClass.CONFIG.maxDistanceFromCenter;
 
         return JigsawPlacement.addPieces(
                 context,

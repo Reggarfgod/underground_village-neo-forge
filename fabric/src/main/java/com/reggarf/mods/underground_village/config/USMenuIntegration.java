@@ -1,6 +1,9 @@
 package com.reggarf.mods.underground_village.config;
 
 
+import com.reggarf.mods.better_lib.config.core.BetterConfigScreenFactory;
+import com.reggarf.mods.better_lib.demo.DemoConfig;
+import com.reggarf.mods.underground_village.CommonClass;
 import com.terraformersmc.modmenu.api.ConfigScreenFactory;
 import com.terraformersmc.modmenu.api.ModMenuApi;
 import me.shedaniel.autoconfig.AutoConfig;
@@ -12,6 +15,11 @@ import net.fabricmc.api.Environment;
 public class USMenuIntegration implements ModMenuApi {
     @Override
     public ConfigScreenFactory<?> getModConfigScreenFactory() {
-        return parent -> AutoConfig.getConfigScreen(USConfigs.class, parent).get();
+        return parent ->
+                BetterConfigScreenFactory.from(
+                        USConfigs.class,
+                        CommonClass.CONFIG,
+                        parent
+                );
     }
 }

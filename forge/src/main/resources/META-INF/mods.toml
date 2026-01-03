@@ -25,3 +25,10 @@ mandatory = true
 versionRange = "${minecraft_version_range}"
 ordering = "NONE"
 side = "BOTH"
+
+[[dependencies."${mod_id}"]]
+modId = "better_lib"
+mandatory = true
+versionRange = "[1.0.109,)"
+ordering = "NONE"
+side = "BOTH"

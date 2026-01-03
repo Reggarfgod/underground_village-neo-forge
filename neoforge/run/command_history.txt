@@ -35,3 +35,13 @@
 /gamemode spectator
 /gamemode creative
 /gamemode spectator
+/locate structure underground_village:underground_village
+/tp @s 192 ~ 0
+/gamemode spectator
+/locate structure underground_village:underground_village
+/tp @s -192 ~ -192
+/gamemode spectator
+/locate structure underground_village:underground_village
+/tp @s -1952 ~ 608
+/locate structure underground_village:underground_village
+/tp @s -1152 ~ 1328

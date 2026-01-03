@@ -33,7 +33,7 @@ public class UnderwaterStructures extends Structure {
                     Codec.intRange(0, 30).fieldOf("size").forGetter(s -> s.size),
                     HeightProvider.CODEC.fieldOf("start_height").forGetter(s -> s.startHeight),
                     Heightmap.Types.CODEC.optionalFieldOf("project_start_to_heightmap").forGetter(s -> s.projectStartToHeightmap),
-                    Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(s -> CommonClass.CONFIG.common.watermaxDistanceFromCenter),
+                    Codec.intRange(1, 128).fieldOf("max_distance_from_center").forGetter(s -> CommonClass.CONFIG.waterMaxDistanceFromCenter),
                     DimensionPadding.CODEC.optionalFieldOf("dimension_padding", JigsawStructure.DEFAULT_DIMENSION_PADDING).forGetter(s -> s.dimensionPadding),
                     LiquidSettings.CODEC.optionalFieldOf("liquid_settings", LiquidSettings.IGNORE_WATERLOGGING).forGetter(s -> s.liquidSettings)
             ).apply(instance, UnderwaterStructures::new));
@@ -59,10 +59,10 @@ public class UnderwaterStructures extends Structure {
         super(settings);
         this.startPool = startPool;
         this.startJigsawName = startJigsawName;
-        this.size = CommonClass.CONFIG.common.waterstructureSize;
+        this.size = CommonClass.CONFIG.waterStructureSize;
         this.startHeight = startHeight;
         this.projectStartToHeightmap = projectStartToHeightmap;
-        this.maxDistanceFromCenter = CommonClass.CONFIG.common.watermaxDistanceFromCenter;
+        this.maxDistanceFromCenter = CommonClass.CONFIG.waterMaxDistanceFromCenter;
         this.dimensionPadding = dimensionPadding;
         this.liquidSettings = liquidSettings;
     }
@@ -92,8 +92,8 @@ private static boolean extraSpawningChecks(GenerationContext context) {
         ChunkPos chunkPos = context.chunkPos();
         BlockPos blockPos = new BlockPos(chunkPos.getMinBlockX(), startY, chunkPos.getMinBlockZ());
 
-        int actualSize = CommonClass.CONFIG.common.waterstructureSize;
-        int actualMaxDistance = CommonClass.CONFIG.common.watermaxDistanceFromCenter;
+        int actualSize = CommonClass.CONFIG.waterStructureSize;
+        int actualMaxDistance = CommonClass.CONFIG.waterMaxDistanceFromCenter;
 
         return JigsawPlacement.addPieces(
                 context,

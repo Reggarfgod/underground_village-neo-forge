@@ -23,7 +23,7 @@ neoForge {
             client()
         }
         data {
-            data()
+            clientData()
 
             // DataGen can be run by - "./gradlew :neoforge:runData" in Terminal.
             // Specify the modid for data generation, where to output the resulting resource, and where to look for existing resources.
@@ -51,5 +51,6 @@ dependencies {
     implementation "curse.maven:cloth-config-348521:5729127"
     implementation "curse.maven:building-gadgets-298187:6850515"
     implementation "curse.maven:charging-gadgets-399757:5615790"
+    implementation "curse.maven:better-library-1150683:7359449"
 }
 sourceSets.main.resources { srcDir 'src/generated/resources' }
