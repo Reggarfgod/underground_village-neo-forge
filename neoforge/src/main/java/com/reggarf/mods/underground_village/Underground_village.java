@@ -4,6 +4,7 @@ package com.reggarf.mods.underground_village;
 import com.reggarf.mods.better_lib.config.core.BetterConfigScreenFactory;
 import com.reggarf.mods.better_lib.gui.screen.BetterConfigScreenHandler;
 import com.reggarf.mods.underground_village.config.USConfigs;
+import com.reggarf.mods.underground_village.register.StructurePlacements;
 import com.reggarf.mods.underground_village.register.USRegistryAccess;
 import com.reggarf.mods.underground_village.register.USStructureTypeAccessNeoForge;
 import com.reggarf.mods.underground_village.register.USStructuresNeoForge;
@@ -22,6 +23,7 @@ public class Underground_village {
 
         eventBus.addListener(Underground_village::onClientSetup);
         USStructuresNeoForge.STRUCTURES.register(eventBus);
+        StructurePlacements.register(eventBus);
         USRegistryAccess.STRUCTURES = new USStructureTypeAccessNeoForge();
         Underground_village_Common.LOG.info("Hello NeoForge world!");
         CommonClass.init();

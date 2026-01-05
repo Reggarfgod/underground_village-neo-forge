@@ -3,6 +3,7 @@ package com.reggarf.mods.underground_village;
 import com.reggarf.mods.better_lib.config.core.BetterConfigScreenFactory;
 import com.reggarf.mods.better_lib.gui.screen.BetterConfigScreenHandler;
 import com.reggarf.mods.underground_village.config.USConfigs;
+import com.reggarf.mods.underground_village.register.StructurePlacements;
 import com.reggarf.mods.underground_village.register.USRegistryAccess;
 import com.reggarf.mods.underground_village.register.USStructureTypeAccessForge;
 import com.reggarf.mods.underground_village.register.USStructuresForge;
@@ -21,6 +22,7 @@ public class Underground_village_forge {
 
         BusGroup busGroup = context.getModBusGroup();
         USStructuresForge.register(busGroup);
+        StructurePlacements.register(busGroup);
         USRegistryAccess.STRUCTURES = new USStructureTypeAccessForge();
         CommonClass.init();
     }

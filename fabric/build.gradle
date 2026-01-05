@@ -2,18 +2,6 @@ plugins {
     id 'multiloader-loader'
     id 'fabric-loom'
 }
-repositories {
-    maven {
-        url "https://maven.terraformersmc.com/"
-        content {
-            includeGroup "dev.emi"
-            includeGroup "com.terraformersmc"
-        }
-    }
-    maven {
-        url "https://cursemaven.com"
-    }
-}
 dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     mappings loom.layered {
@@ -22,9 +10,6 @@ dependencies {
     }
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    modImplementation "curse.maven:modmenu-308702:5810603"
-    modImplementation "curse.maven:cloth-config-348521:5729125"
-    modImplementation "curse.maven:better-library-1150683:7359436"
 }
 
 loom {
@@ -49,4 +34,54 @@ loom {
             runDir('runs/server')
         }
     }
+}
+
+// Implement mcgradleconventions loader attribute
+def loaderAttribute = Attribute.of('io.github.mcgradleconventions.loader', String)
+['apiElements', 'runtimeElements', 'sourcesElements', 'javadocElements', 'includeInternal', 'modCompileClasspath'].each { variant ->
+    configurations.named("$variant") {
+        attributes {
+            attribute(loaderAttribute, 'fabric')
+        }
+    }
+}
+sourceSets.configureEach {
+    [it.compileClasspathConfigurationName, it.runtimeClasspathConfigurationName].each { variant->
+        configurations.named("$variant") {
+            attributes {
+                attribute(loaderAttribute, 'fabric')
+            }
+        }
+    }
+}
+loom.remapConfigurations.configureEach {
+    configurations.named(it.name) {
+        attributes {
+            attribute(loaderAttribute, 'fabric')
+        }
+    }
+}
+
+repositories {
+    maven {
+        url "https://maven.terraformersmc.com/"
+        content {
+            includeGroup "dev.emi"
+            includeGroup "com.terraformersmc"
+        }
+    }
+    maven {
+        url "https://cursemaven.com"
+    }
+}
+dependencies {
+    minecraft "com.mojang:minecraft:${minecraft_version}"
+    mappings loom.layered {
+        officialMojangMappings()
+        parchment("org.parchmentmc.data:parchment-${parchment_minecraft}:${parchment_version}@zip")
+    }
+    modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
+    modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
+    modImplementation "curse.maven:modmenu-308702:7363966"
+    modImplementation "curse.maven:better-library-1150683:7367665"
 }

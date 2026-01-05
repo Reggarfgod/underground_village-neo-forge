@@ -6,10 +6,10 @@
     }
   ],
   "placement": {
+    "type": "underground_village:distance_based_structure_placement",
     "salt": 8699777,
 
     "spacing": 72,
-    "separation": 32,
-    "type": "minecraft:random_spread"
+    "separation": 32
   }
 }

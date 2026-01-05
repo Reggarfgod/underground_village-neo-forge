@@ -5,7 +5,7 @@ import com.reggarf.mods.better_lib.config.annotation.Config;
 import com.reggarf.mods.better_lib.config.annotation.ConfigEntry.*;
 import com.reggarf.mods.better_lib.config.api.ConfigData;
 
-@Config(modid = Underground_village_Common.MODID,name = "common")
+@Config(modid = Underground_village_Common.MODID, name = "common")
 public class USConfigs implements ConfigData {
 
     @Category("Generation")
@@ -28,8 +28,19 @@ public class USConfigs implements ConfigData {
     @BoundedDiscrete(min = 1, max = 128)
     public int waterMaxDistanceFromCenter = 116;
 
+
+    @Category("Structure Placement")
+    @Description("Spacing between underground village placements (must be greater than separation).")
+    @BoundedDiscrete(min = 1, max = 256)
+    public int placementSpacing = 32;
+
+    @Category("Structure Placement")
+    @Description("Minimum separation between underground village placements.")
+    @BoundedDiscrete(min = 0, max = 255)
+    public int placementSeparation = 8;
+
+
     @Category("Messages")
     @Description("Show the welcome message with Discord, GitHub, and support links on first join. (Requires restart)")
     public boolean enableInGameMessage = true;
-
 }

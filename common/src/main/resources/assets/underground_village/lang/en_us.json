@@ -1,13 +1,24 @@
 {
   "config.common.title": "Underground Villages Settings",
-  "config.common.structureSize": "Underground village  Structure Size",
+
+  "config.common.structureSize": "Underground Village Structure Size",
   "config.common.structureSize.tooltip": "Controls the overall size of underground village structures.",
-  "config.common.maxDistanceFromCenter": "Underground village Max Distance From Center",
+
+  "config.common.maxDistanceFromCenter": "Underground Village Max Distance From Center",
   "config.common.maxDistanceFromCenter.tooltip": "Maximum distance that structure pieces can generate from the village center.",
-  "config.common.waterStructureSize": "Underwater village  Structure Size",
+
+  "config.common.waterStructureSize": "Underwater Village Structure Size",
   "config.common.waterStructureSize.tooltip": "Controls the size of water-based underground village structures.",
-  "config.common.waterMaxDistanceFromCenter": "Underwater village Max Distance From Center",
+
+  "config.common.waterMaxDistanceFromCenter": "Underwater Village Max Distance From Center",
   "config.common.waterMaxDistanceFromCenter.tooltip": "Maximum distance that water-based structure pieces can generate from the center.",
+
+  "config.common.placementSpacing": "Structure Placement Spacing",
+  "config.common.placementSpacing.tooltip": "Distance (in chunks) between underground and underwater village placements. Must be greater than separation.",
+
+  "config.common.placementSeparation": "Structure Placement Separation",
+  "config.common.placementSeparation.tooltip": "Minimum chunk distance between underground and underwater village placements.",
+
   "config.common.enableInGameMessage": "Show Welcome Message",
   "config.common.enableInGameMessage.tooltip": "Shows a welcome message with Discord, GitHub, and support links on first join. Requires a game restart."
 }
