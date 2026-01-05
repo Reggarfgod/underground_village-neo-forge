@@ -12,9 +12,6 @@ import net.minecraftforge.registries.RegistryObject;
 
 import static com.reggarf.mods.underground_village.Underground_village_Common.MODID;
 
-/**
- * Forge StructureType registration (1.21.6+ REAL API)
- */
 public final class USStructuresForge {
 
     private static final DeferredRegister<StructureType<?>> STRUCTURE_TYPES =
@@ -36,7 +33,6 @@ public final class USStructuresForge {
         return () -> codec;
     }
 
-    /** ✅ Forge 1.21.6+ correct registration */
     public static void register(BusGroup busGroup) {
         STRUCTURE_TYPES.register(busGroup);
     }

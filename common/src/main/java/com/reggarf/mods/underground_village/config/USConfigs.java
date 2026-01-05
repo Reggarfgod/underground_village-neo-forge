@@ -32,12 +32,12 @@ public class USConfigs implements ConfigData {
     @Category("Structure Placement")
     @Description("Spacing between underground village placements (must be greater than separation).")
     @BoundedDiscrete(min = 1, max = 256)
-    public int placementSpacing = 32;
+    public int placementSpacing = 72;
 
     @Category("Structure Placement")
     @Description("Minimum separation between underground village placements.")
     @BoundedDiscrete(min = 0, max = 255)
-    public int placementSeparation = 8;
+    public int placementSeparation = 32;
 
 
     @Category("Messages")
