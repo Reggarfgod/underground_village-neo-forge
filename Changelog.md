@@ -40,6 +40,11 @@ Date: Dec 14, 2025
 The Update will be live soon :- https://www.curseforge.com/minecraft/mc-mods/underground-villages-stoneholm
 checkout full changelogs with image on discord :- https://discord.gg/JBFNW3wdTm
 
+## Added / Improved
+- Placement spacing
+- Placement separation
+- All placement values are now config-driven instead of hardcoded
+
 ## Removed
 
 - Diamonds
