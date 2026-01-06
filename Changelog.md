@@ -34,7 +34,7 @@ New Added
 ------------------------------------------------------------------------------------------------------------
 # [Version:1.5.7]
 
-Minecraft Version: 1.20.1-1.21.6 ( Neoforge,Forge and fabric )
+Minecraft Version: 1.20.1-1.21.11 ( Neoforge,Forge and fabric )
 Date: Dec 14, 2025
 
 The Update will be live soon :- https://www.curseforge.com/minecraft/mc-mods/underground-villages-stoneholm
