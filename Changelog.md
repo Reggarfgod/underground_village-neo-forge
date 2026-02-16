@@ -39,6 +39,10 @@ Date: Dec 14, 2025
 
 The Update will be live soon :- https://www.curseforge.com/minecraft/mc-mods/underground-villages-stoneholm
 checkout full changelogs with image on discord :- https://discord.gg/JBFNW3wdTm
+## Added
+
+- Config For Structure spacing (1.20.1)
+- Config For Structure separation (1.20.1)
 
 ## Removed
 
