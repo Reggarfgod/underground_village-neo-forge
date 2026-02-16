@@ -47,6 +47,7 @@ checkout full changelogs with image on discord :- https://discord.gg/JBFNW3wdTm
 - Enchanted books
 - Golden apples
 - Diamond tools
+- Underwater Villager ( 1.20.1 )
 
 ## Reduced
 
