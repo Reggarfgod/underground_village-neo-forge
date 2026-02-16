@@ -6,7 +6,7 @@
     {
       "weight": 2,
       "element": {
-        "location": "stoneholm:hallways/hallway_x",
+        "location": "stoneholm:hallways/v4/hallway_x",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"
@@ -24,7 +24,7 @@
     {
       "weight": 1,
       "element": {
-        "location": "stoneholm:hall_to_highway",
+        "location": "stoneholm:v4/hall_to_highway",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
         "element_type": "minecraft:single_pool_element"

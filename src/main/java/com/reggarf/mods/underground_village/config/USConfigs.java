@@ -38,8 +38,19 @@ public class USConfigs extends PartitioningSerializer.GlobalData {
         public int watermaxDistanceFromCenter = 116;
 
         @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 200)
+        @Comment("Structure spacing (distance between structure attempts). Requires restart.")
+        public int structureSpacing = 72;
+
+        @ConfigEntry.Gui.Tooltip
+        @ConfigEntry.BoundedDiscrete(min = 1, max = 200)
+        @Comment("Structure separation (minimum distance between structures). Requires restart.")
+        public int structureSeparation = 32;
+
+        @ConfigEntry.Gui.Tooltip
         @Comment("Enable or disable the welcome message, Requires game restart after changing this setting.")
         public Boolean ENABLE_IN_GAME_MESSAGE = true;
     }
+
 }
 

@@ -1,33 +1,32 @@
 {
   "processors": [
     {
-      "processor_type": "minecraft:rule",
       "rules": [
         {
+          "output_state": {
+            "Name": "minecraft:mossy_cobblestone"
+          },
           "input_predicate": {
             "block": "minecraft:cobblestone",
             "probability": 0.01,
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
-            "predicate_type": "always_true"
-
-          }, "output_state": {
-          "Name": "minecraft:mossy_cobblestone"
-        }
+            "predicate_type": "minecraft:always_true"
+          }
         },
         {
-
+          "output_state": {
+            "Name": "minecraft:cobblestone"
+          },
           "input_predicate": {
             "block": "minecraft:barrel",
             "probability": 0.85,
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
-            "predicate_type": "always_true"
-          },"output_state": {
-          "Name": "minecraft:cobblestone"
-        }
+            "predicate_type": "minecraft:always_true"
+          }
         },
         {
           "output_state": {
@@ -42,10 +41,10 @@
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
-            "predicate_type": "always_true"
+            "predicate_type": "minecraft:always_true"
           }
         },
-        
+
         {
           "output_state": {
             "Name": "minecraft:air"
@@ -56,7 +55,7 @@
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
-            "predicate_type": "always_true"
+            "predicate_type": "minecraft:always_true"
           }
         },
         {
@@ -75,10 +74,14 @@
             "predicate_type": "minecraft:random_block_match"
           },
           "location_predicate": {
-            "predicate_type": "always_true"
+            "predicate_type": "minecraft:always_true"
           }
         }
-      ]
+      ],
+      "processor_type": "minecraft:rule"
+    },
+    {
+      "processor_type": "underground_village:nowater_processor"
     }
   ]
 }

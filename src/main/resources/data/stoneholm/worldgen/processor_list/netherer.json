@@ -112,6 +112,9 @@
         }
       ],
       "processor_type": "minecraft:rule"
+    },
+    {
+      "processor_type": "underground_village:nowater_processor"
     }
   ]
 }

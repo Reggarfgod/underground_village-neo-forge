@@ -32,6 +32,15 @@
     {
       "weight": 140,
       "element": {
+        "location": "stoneholm:poi/v4/tall_bedroom",
+        "processors": "stoneholm:decayer",
+        "projection": "rigid",
+        "element_type": "minecraft:single_pool_element"
+      }
+    },
+    {
+      "weight": 140,
+      "element": {
         "location": "stoneholm:poi/v4/sidebed_bedroom",
         "processors": "stoneholm:decayer",
         "projection": "rigid",
@@ -57,7 +66,7 @@
       }
     },
     {
-      "weight": 70,
+      "weight": 100,
       "element": {
         "location": "stoneholm:poi/v4/founten",
         "processors": "stoneholm:decayer",

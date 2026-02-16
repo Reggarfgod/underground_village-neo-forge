@@ -1,8 +1,8 @@
 package com.reggarf.mods.underground_village.structureplacement;
 
-
 import com.mojang.serialization.Codec;
 import com.mojang.serialization.codecs.RecordCodecBuilder;
+import com.reggarf.mods.underground_village.Underground_village;
 import com.reggarf.mods.underground_village.register.USStructurePlacements;
 import net.minecraft.core.Vec3i;
 import net.minecraft.util.ExtraCodecs;
@@ -41,19 +41,33 @@ public class DistanceBasedStructurePlacement extends RandomSpreadStructurePlacem
                                            RandomSpreadType spreadType,
                                            Optional<Integer> minDistanceFromWorldOrigin
     ) {
-        super(locationOffset, frequencyReductionMethod, frequency, salt, exclusionZone, spacing, separation, spreadType);
+
+        super(
+                locationOffset,
+                frequencyReductionMethod,
+                frequency,
+                salt,
+                exclusionZone,
+                Underground_village.CONFIG.common.structureSpacing,
+                Underground_village.CONFIG.common.structureSeparation,
+                spreadType
+        );
+
         this.minDistanceFromWorldOrigin = minDistanceFromWorldOrigin;
 
-        // Helpful validation to ensure that spacing value is always greater than separation value
-        if (spacing <= separation) {
+        int configSpacing = Underground_village.CONFIG.common.structureSpacing;
+        int configSeparation = Underground_village.CONFIG.common.structureSeparation;
+
+        if (configSpacing <= configSeparation) {
             throw new RuntimeException("""
-                Spacing cannot be less or equal to separation.
-                Please correct this error as there's no way to spawn this structure properly
-                    Spacing: %s
-                    Separation: %s.
-            """.formatted(spacing, separation));
+            Spacing cannot be less or equal to separation.
+            Please correct this error as there's no way to spawn this structure properly
+                Spacing: %s
+                Separation: %s.
+        """.formatted(configSpacing, configSeparation));
         }
     }
+
 
     public Optional<Integer> minDistanceFromWorldOrigin() {
         return this.minDistanceFromWorldOrigin;
@@ -62,12 +76,11 @@ public class DistanceBasedStructurePlacement extends RandomSpreadStructurePlacem
     @Override
     protected boolean isPlacementChunk(ChunkGeneratorStructureState chunkGeneratorStructureState, int x, int z) {
         if (minDistanceFromWorldOrigin.isPresent()) {
-            // Convert chunk position to block position.
             long xBlockPos = x * 16L;
             long zBlockPos = z * 16L;
 
-            // Simple fast distance check without needing to do a square root. The threshold is circular around world origin.
-            if ((xBlockPos * xBlockPos) + (zBlockPos * zBlockPos) < (((long) minDistanceFromWorldOrigin.get()) * minDistanceFromWorldOrigin.get())) {
+            if ((xBlockPos * xBlockPos) + (zBlockPos * zBlockPos)
+                    < (((long) minDistanceFromWorldOrigin.get()) * minDistanceFromWorldOrigin.get())) {
                 return false;
             }
         }
@@ -80,5 +93,4 @@ public class DistanceBasedStructurePlacement extends RandomSpreadStructurePlacem
     public StructurePlacementType<?> type() {
         return USStructurePlacements.DISTANCE_BASED_STRUCTURE_PLACEMENT.get();
     }
-
 }
