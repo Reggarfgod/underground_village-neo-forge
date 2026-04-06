@@ -21,7 +21,7 @@ public class Underground_village implements ModInitializer {
         Registry.register(
                 BuiltInRegistries.STRUCTURE_PLACEMENT,
                 Identifier.fromNamespaceAndPath(
-                        Underground_village_Common.MODID,
+                        Constants.MODID,
                         "distance_based_structure_placement"
                 ),
                 USStructurePlacements.DISTANCE_BASED_STRUCTURE_PLACEMENT

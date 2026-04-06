@@ -5,7 +5,7 @@ import com.reggarf.mods.better_lib.message.api.JoinMessagePlugin;
 import com.reggarf.mods.better_lib.message.api.JoinMessagePlugins;
 import com.reggarf.mods.better_lib.message.api.JoinMessageSet;
 import com.reggarf.mods.underground_village.CommonClass;
-import com.reggarf.mods.underground_village.Underground_village_Common;
+import com.reggarf.mods.underground_village.Constants;
 
 
 
@@ -15,7 +15,7 @@ import java.util.List;
 public class JoinPlugin implements JoinMessagePlugin {
     @Override
     public String getModId() {
-        return Underground_village_Common.MODID;
+        return Constants.MODID;
     }
 
     @Override

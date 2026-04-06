@@ -8,15 +8,12 @@ import com.reggarf.mods.underground_village.register.StructurePlacements;
 import com.reggarf.mods.underground_village.register.USRegistryAccess;
 import com.reggarf.mods.underground_village.register.USStructureTypeAccessNeoForge;
 import com.reggarf.mods.underground_village.register.USStructuresNeoForge;
-import net.neoforged.api.distmarker.Dist;
 import net.neoforged.bus.api.IEventBus;
-import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.fml.common.Mod;
 import net.neoforged.fml.event.lifecycle.FMLClientSetupEvent;
 
 
-@Mod(Underground_village_Common.MODID)
+@Mod(Constants.MODID)
 public class Underground_village {
 
     public Underground_village(IEventBus eventBus) {
@@ -25,12 +22,12 @@ public class Underground_village {
         USStructuresNeoForge.STRUCTURES.register(eventBus);
         StructurePlacements.register(eventBus);
         USRegistryAccess.STRUCTURES = new USStructureTypeAccessNeoForge();
-        Underground_village_Common.LOG.info("Hello NeoForge world!");
+        Constants.LOG.info("Hello NeoForge world!");
         CommonClass.init();
     }
         public static void onClientSetup(FMLClientSetupEvent event) {
             event.enqueueWork(() -> {
-                BetterConfigScreenHandler.register(Underground_village_Common.MODID, parent ->
+                BetterConfigScreenHandler.register(Constants.MODID, parent ->
                         BetterConfigScreenFactory.from(USConfigs.class, CommonClass.CONFIG, parent)
                 );
             });

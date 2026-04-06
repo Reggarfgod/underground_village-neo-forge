@@ -1,6 +1,5 @@
 package com.reggarf.mods.underground_village.register;
 
-import com.reggarf.mods.underground_village.Underground_village;
 import com.reggarf.mods.underground_village.structure.UndergroundStructure;
 import com.reggarf.mods.underground_village.structure.UnderwaterStructures;
 import net.minecraft.core.Registry;
@@ -9,7 +8,7 @@ import net.minecraft.core.registries.BuiltInRegistries;
 import net.minecraft.resources.Identifier;
 import net.minecraft.world.level.levelgen.structure.StructureType;
 
-import static com.reggarf.mods.underground_village.Underground_village_Common.MODID;
+import static com.reggarf.mods.underground_village.Constants.MODID;
 
 public final class USStructuresFabric {
 

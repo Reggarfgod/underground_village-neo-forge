@@ -8,7 +8,7 @@ import net.minecraft.world.level.levelgen.structure.StructureType;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 
-import static com.reggarf.mods.underground_village.Underground_village_Common.MODID;
+import static com.reggarf.mods.underground_village.Constants.MODID;
 
 
 public final class USStructuresNeoForge {

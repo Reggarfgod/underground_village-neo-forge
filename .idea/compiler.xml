@@ -9,15 +9,8 @@
         </processorPath>
         <module name="MultiLoader-Template.common.main" />
       </profile>
-      <profile name="Gradle Imported" enabled="true">
-        <outputRelativeToContentRoot value="true" />
-        <processorPath useClasspath="false">
-          <entry name="$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.spongepowered/mixin/0.8.5-SNAPSHOT/98b6c982030c7e9d79d3e78b31d86b285f292146/mixin-0.8.5-SNAPSHOT-processor.jar" />
-        </processorPath>
-        <module name="MultiLoader-Template.forge.main" />
-      </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="21">
+    <bytecodeTargetLevel target="25">
       <module name="Underground-Village.buildSrc" target="21" />
       <module name="Underground-Village.buildSrc.main" target="21" />
       <module name="Underground-Village.buildSrc.test" target="21" />

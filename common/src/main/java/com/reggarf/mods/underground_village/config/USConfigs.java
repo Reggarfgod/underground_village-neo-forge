@@ -1,11 +1,11 @@
 package com.reggarf.mods.underground_village.config;
 
-import com.reggarf.mods.underground_village.Underground_village_Common;
+import com.reggarf.mods.underground_village.Constants;
 import com.reggarf.mods.better_lib.config.annotation.Config;
 import com.reggarf.mods.better_lib.config.annotation.ConfigEntry.*;
 import com.reggarf.mods.better_lib.config.api.ConfigData;
 
-@Config(modid = Underground_village_Common.MODID, name = "common")
+@Config(modid = Constants.MODID, name = "common")
 public class USConfigs implements ConfigData {
 
     @Category("Generation")

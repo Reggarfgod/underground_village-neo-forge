@@ -1,6 +1,6 @@
 package com.reggarf.mods.underground_village.register;
 
-import com.reggarf.mods.underground_village.Underground_village_Common;
+import com.reggarf.mods.underground_village.Constants;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.structure.placement.StructurePlacementType;
 import net.neoforged.bus.api.IEventBus;
@@ -15,7 +15,7 @@ public class StructurePlacements {
     public static final DeferredRegister<StructurePlacementType<?>> STRUCTURE_PLACEMENTS =
             DeferredRegister.create(
                     Registries.STRUCTURE_PLACEMENT,
-                    Underground_village_Common.MODID
+                    Constants.MODID
             );
 
     public static void register(IEventBus modBus) {
