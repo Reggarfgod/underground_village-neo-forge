@@ -121,7 +121,7 @@ public class DistanceBasedStructurePlacement extends RandomSpreadStructurePlacem
         }
 
         ChunkPos pos = this.getPotentialStructureChunk(state.getLevelSeed(), x, z);
-        return pos.x == x && pos.z == z;
+        return pos.x() == x && pos.z() == z;
     }
 
     @Override
