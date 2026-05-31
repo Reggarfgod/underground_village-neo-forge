@@ -11,7 +11,7 @@ public class USConfigs implements ConfigData {
     @Category("Generation")
     @Description("Default size of underground village structures.")
     @BoundedDiscrete(min = 1, max = 30)
-    public int structureSize = 15;
+    public int structureSize = 10;
 
     @Category("Generation")
     @Description("Maximum distance structure pieces can generate from the village center.")
@@ -21,7 +21,7 @@ public class USConfigs implements ConfigData {
     @Category("Water Structures")
     @Description("Default size of water-based underground village structures.")
     @BoundedDiscrete(min = 1, max = 30)
-    public int waterStructureSize = 15;
+    public int waterStructureSize = 10;
 
     @Category("Water Structures")
     @Description("Maximum distance water structure pieces can generate from the center.")

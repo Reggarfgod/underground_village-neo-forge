@@ -80,10 +80,10 @@ repositories {
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
-    implementation "curse.maven:cloth-config-348521:5729126"
+    //implementation "curse.maven:cloth-config-348521:5729126"
     // Forge's hack fix
     implementation('net.sf.jopt-simple:jopt-simple:5.0.4') { version { strictly '5.0.4' } }
-    implementation "curse.maven:better-library-1150683:7359451"
+    implementation "curse.maven:better-library-1150683:7359506"
 }
 
 publishing {

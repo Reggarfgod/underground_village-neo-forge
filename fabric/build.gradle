@@ -22,9 +22,11 @@ dependencies {
     }
     modImplementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     modImplementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    modImplementation "curse.maven:modmenu-308702:5810603"
-    modImplementation "curse.maven:cloth-config-348521:5729125"
-    modImplementation "curse.maven:better-library-1150683:7359436"
+    modImplementation("com.terraformersmc:modmenu:${rootProject.mod_menu_version}") {
+        transitive = false
+    }
+   // modImplementation "curse.maven:cloth-config-348521:5729125"
+    modImplementation "curse.maven:better-library-1150683:7359507"
 }
 
 loom {
