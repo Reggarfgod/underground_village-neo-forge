@@ -1,0 +1,33 @@
+/locate structure underground_village:underground_village
+/tp @s -1824 ~ -1872
+/gamemode spectator
+/locate structure underground_village:underground_village
+/tp @s -2832 ~ -1968
+/locate structure underground_village:underground_village
+/tp @s -2832 ~ -1968
+/place structure underground_village:underground_village
+/locate structure underground_village:underground_village
+/tp @s -1824 ~ -1872
+/gamemode spectator
+/locate structure underground_village:underground_village
+/tp @s -1824 ~ -1872
+/gamemode spectator
+/locate structure underground_village:underground_village
+/tp @s 64 ~ -1136
+/gamemode spectator
+/locate structure
+/locate structure underground_village:underground_village
+/tp @s -608 ~ 208
+/gamemode spectator
+/locate structure underground_village:underground_village
+/tp @s 1776 ~ 1488
+/gamemode spectator
+/locate structure underground_village:underground_village
+/tp @s -736 ~ 368
+/gamemode spectator
+/locate structure underground_village:underground_village
+/gamemode spectator
+/tp @s -576 ~ -3312
+/locate structure underground_village:underground_village
+/tp @s -1968 ~ -2272
+/gamemode spectator

@@ -8,7 +8,9 @@ import com.reggarf.mods.underground_village.register.USRegistryAccess;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Holder;
 import net.minecraft.resources.Identifier;
+import net.minecraft.tags.BiomeTags;
 import net.minecraft.world.level.ChunkPos;
+import net.minecraft.world.level.biome.Biome;
 import net.minecraft.world.level.levelgen.Heightmap;
 import net.minecraft.world.level.levelgen.WorldGenerationContext;
 import net.minecraft.world.level.levelgen.heightproviders.HeightProvider;
@@ -79,18 +81,92 @@ public class UndergroundStructure extends Structure {
         this.dimensionPadding = dimensionPadding;
         this.liquidSettings = liquidSettings;
     }
-
     private static boolean extraSpawningChecks(GenerationContext context) {
-        ChunkPos chunkpos = context.chunkPos();
 
-        return context.chunkGenerator().getFirstOccupiedHeight(
-                chunkpos.getMinBlockX(),
-                chunkpos.getMinBlockZ(),
-                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
-                context.heightAccessor(),
+        ChunkPos chunkPos = context.chunkPos();
+
+        int x = chunkPos.getMiddleBlockX();
+        int z = chunkPos.getMiddleBlockZ();
+
+        var level = context.heightAccessor();
+
+        int centerY = context.chunkGenerator().getBaseHeight(
+                x,
+                z,
+                Heightmap.Types.WORLD_SURFACE_WG,
+                level,
                 context.randomState()
-        ) > context.chunkGenerator().getMinY();
+        );
+
+        // Global height limits
+        if (centerY < 45 || centerY > 85)
+            return false;
+
+        int minHeight = centerY;
+        int maxHeight = centerY;
+
+        // Check 10 blocks around center
+        for (int dx = -10; dx <= 10; dx++) {
+            for (int dz = -10; dz <= 10; dz++) {
+
+                int checkX = x + dx;
+                int checkZ = z + dz;
+
+                int surfaceY = context.chunkGenerator().getBaseHeight(
+                        checkX,
+                        checkZ,
+                        Heightmap.Types.WORLD_SURFACE_WG,
+                        level,
+                        context.randomState()
+                );
+
+                int oceanFloorY = context.chunkGenerator().getBaseHeight(
+                        checkX,
+                        checkZ,
+                        Heightmap.Types.OCEAN_FLOOR_WG,
+                        level,
+                        context.randomState()
+                );
+
+                // Water nearby (ocean, river, lake)
+                if (surfaceY - oceanFloorY > 2) {
+                    return false;
+                }
+
+                Holder<Biome> biome = context.biomeSource().getNoiseBiome(
+                        checkX >> 2,
+                        surfaceY >> 2,
+                        checkZ >> 2,
+                        context.randomState().sampler()
+                );
+
+                // Reject mountain biomes
+                if (biome.is(BiomeTags.IS_MOUNTAIN)) {
+                    return false;
+                }
+
+                minHeight = Math.min(minHeight, surfaceY);
+                maxHeight = Math.max(maxHeight, surfaceY);
+            }
+        }
+
+        // Area must be nearly flat
+        if ((maxHeight - minHeight) > 6) {
+            return false;
+        }
+        return true;
     }
+//    private static boolean extraSpawningChecks(GenerationContext context) {
+//        ChunkPos chunkpos = context.chunkPos();
+//
+//        return context.chunkGenerator().getFirstOccupiedHeight(
+//                chunkpos.getMinBlockX(),
+//                chunkpos.getMinBlockZ(),
+//                Heightmap.Types.MOTION_BLOCKING_NO_LEAVES,
+//                context.heightAccessor(),
+//                context.randomState()
+//        ) > context.chunkGenerator().getMinY();
+//    }
 
     @Override
     public Optional<GenerationStub> findGenerationPoint(GenerationContext context) {

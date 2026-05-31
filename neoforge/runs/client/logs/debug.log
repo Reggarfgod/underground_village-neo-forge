@@ -1,0 +1,225 @@
+[31May2026 12:03:52.161] [main/INFO] [net.neoforged.fml.startup.Entrypoint/]: JVM Uptime at startup: 134ms
+[31May2026 12:03:52.171] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Starting FancyModLoader version 11.0.3 (CLIENT in DEV)
+[31May2026 12:03:52.171] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Game directory: E:\newmods\uss\neoforge\runs\client
+[31May2026 12:03:52.225] [main/INFO] [net.neoforged.fml.loading.EarlyServiceDiscovery/]: Found 2 early service jars (out of 108) in 22ms
+[31May2026 12:03:52.225] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Early Services:
+[31May2026 12:03:52.226] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/Anoop Singh/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/earlydisplay/11.0.3/8c620a52ec9cd3296b13a453d6229ac2617a9a5e/earlydisplay-11.0.3.jar
+[31May2026 12:03:52.227] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/Anoop Singh/.gradle/caches/modules-2/files-2.1/net.neoforged.fancymodloader/loader/11.0.3/3f76babf6fa2bbeb3c8390ce0aad2f44f53cbe47/loader-11.0.3.jar
+[31May2026 12:03:52.233] [main/INFO] [net.neoforged.fml.loading.ImmediateWindowHandler/]: Loading ImmediateWindowProvider fmlearlywindow
+[31May2026 12:03:52.786] [ForkJoinPool.commonPool-worker-10/INFO] [net.neoforged.fml.loading.moddiscovery.locators.GameLocator/]: Detected a joined NeoForge and Minecraft configuration. Applying filtering...
+[31May2026 12:03:52.858] [fml-loadingscreen/INFO] [net.neoforged.fml.earlydisplay.render.LoadingScreenRenderer/]: GL info: NVIDIA GeForce RTX 5060/PCIe/SSE2 GL version 3.3.0 NVIDIA 610.47, NVIDIA Corporation
+[31May2026 12:03:52.866] [ForkJoinPool.commonPool-worker-10/INFO] [net.neoforged.fml.loading.moddiscovery.locators.InDevFolderLocator/CORE]: Got mod coordinates underground_village%%E:\newmods\uss\neoforge\build\classes\java\main;underground_village%%E:\newmods\uss\neoforge\build\resources\main from env
+[31May2026 12:03:53.012] [ForkJoinPool.commonPool-worker-10/INFO] [net.neoforged.fml.loading.moddiscovery.locators.JarInJarDependencyLocator/]: Found 2 dependencies adding them to mods collection
+[31May2026 12:03:53.014] [ForkJoinPool.commonPool-worker-10/INFO] [net.neoforged.fml.loading.moddiscovery.ModDiscoverer/]: 
+     Mod List:
+		Name Version (Mod Id)
+
+		Better lib 2.0.0-beta (better_lib)
+		Minecraft 26.1 (minecraft)
+		NeoForge 26.1.0.1-beta (neoforge)
+		Underground Village, Stoneholm 2.0-beta (underground_village)
+[31May2026 12:03:53.211] [main/INFO] [mixin/]: SpongePowered MIXIN Subsystem Version=0.8.7 Source=file:/C:/Users/Anoop%20Singh/.gradle/caches/modules-2/files-2.1/net.fabricmc/sponge-mixin/0.16.5+mixin.0.8.7/80fc3a9f592673cea87f4cd702f87991c6c9fe4d/sponge-mixin-0.16.5+mixin.0.8.7.jar Service=FML Env=CLIENT
+[31May2026 12:03:53.228] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Loading FML Plugins:
+[31May2026 12:03:53.229] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]:  - C:/Users/Anoop Singh/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.0.1-beta/ef713b81fdcc723ad4c9d2ac2e7d4173f8dbdbd6/neoforge-26.1.0.1-beta-universal.jar > net.neoforged.neoforge-coremods-26.1.0.1-beta.jar
+[31May2026 12:03:53.295] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Building game content classloader:
+ - better_lib (jar(C:/Users/Anoop Singh/.gradle/caches/modules-2/files-2.1/curse.maven/better-library-1150683/7875779/d5afd2f170f4083b336b85890dfc1306f4756533/better-library-1150683-7875779.jar))
+ - minecraft (composite(filtered(jar(E:/newmods/uss/neoforge/build/moddev/artifacts/minecraft-patched-26.1.0.1-beta.jar)), filtered(jar(E:/newmods/uss/neoforge/build/moddev/artifacts/minecraft-patched-26.1.0.1-beta.jar))))
+ - mixinextras.neoforge (jar(C:/Users/Anoop Singh/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.0.1-beta/ef713b81fdcc723ad4c9d2ac2e7d4173f8dbdbd6/neoforge-26.1.0.1-beta-universal.jar > mixinextras-neoforge-0.5.3.jar))
+ - neoforge (composite(filtered(jar(C:/Users/Anoop Singh/.gradle/caches/modules-2/files-2.1/net.neoforged/neoforge/26.1.0.1-beta/ef713b81fdcc723ad4c9d2ac2e7d4173f8dbdbd6/neoforge-26.1.0.1-beta-universal.jar))))
+ - net.neoforged.fml.generated (empty(VirtualJar/net.neoforged.fml.generated))
+ - underground_village (composite(folder(E:/newmods/uss/neoforge/build/classes/java/main), folder(E:/newmods/uss/neoforge/build/resources/main)))
+[31May2026 12:03:53.305] [main/INFO] [net.neoforged.fml.loading.FMLLoader/]: Built game content classloader in 18ms
+[31May2026 12:03:53.344] [main/WARN] [mixin/]: Reference map 'better_lib.refmap.json' for better_lib.mixins.json could not be read. If this is a development environment you can ignore this message
+[31May2026 12:03:53.345] [main/WARN] [mixin/]: Reference map 'underground_village.refmap.json' for underground_village.mixins.json could not be read. If this is a development environment you can ignore this message
+[31May2026 12:03:54.459] [pool-9-thread-1/INFO] [MixinExtras|Service/]: Initializing MixinExtras via com.llamalad7.mixinextras.service.MixinExtrasServiceImpl(version=0.5.3).
+[31May2026 12:03:54.459] [Datafixer Bootstrap/INFO] [com.mojang.datafixers.DataFixerBuilder/]: 294 Datafixer optimizations took 304 milliseconds
+[31May2026 12:03:58.376] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[31May2026 12:03:58.378] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, location] and [teleport, targets] with inputs: [0.1 -0.5 .9, 0 0 0]
+[31May2026 12:03:58.383] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, destination] and [teleport, targets] with inputs: [Player, 0123, @e, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[31May2026 12:03:58.384] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets] and [teleport, destination] with inputs: [Player, 0123, dd12be42-52a9-4a91-a8a1-11c01849e498]
+[31May2026 12:03:58.385] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [teleport, targets, location] and [teleport, targets, destination] with inputs: [0.1 -0.5 .9, 0 0 0]
+[31May2026 12:03:58.387] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, set, time] and [time, set, timemarker] with inputs: [0, 0s, 0d, 0t]
+[31May2026 12:03:58.388] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, set, timemarker] and [time, set, time] with inputs: [012]
+[31May2026 12:03:58.389] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, of, clock, set, time] and [time, of, clock, set, timemarker] with inputs: [0, 0s, 0d, 0t]
+[31May2026 12:03:58.391] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [time, of, clock, set, timemarker] and [time, of, clock, set, time] with inputs: [012]
+[31May2026 12:03:58.392] [main/WARN] [net.minecraft.commands.Commands/]: Ambiguity between arguments [waypoint, modify, waypoint, color, reset] and [waypoint, modify, waypoint, color, color] with inputs: [reset]
+[31May2026 12:03:58.440] [modloading-worker-0/INFO] [Better lib/]: Hello NeoForge world!
+[31May2026 12:03:58.450] [modloading-worker-0/INFO] [Underground Village/]: Hello NeoForge world!
+[31May2026 12:03:58.452] [modloading-worker-0/INFO] [net.neoforged.neoforge.common.NeoForgeMod/NEOFORGE-MOD]: NeoForge mod loading, version 26.1.0.1-beta, for MC 26.1
+[31May2026 12:03:58.921] [Render thread/INFO] [com.mojang.authlib.yggdrasil.YggdrasilAuthenticationService/]: Environment: Environment[sessionHost=https://sessionserver.mojang.com, servicesHost=https://api.minecraftservices.com, profilesHost=https://api.mojang.com, name=PROD]
+[31May2026 12:03:58.937] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Setting user: Dev
+[31May2026 12:03:59.011] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Backend library: LWJGL version 3.4.1+2
+[31May2026 12:03:59.174] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Using optional rendering extensions: GL_ARB_buffer_storage, GL_KHR_debug, GL_ARB_vertex_attrib_binding, GL_ARB_direct_state_access, GL_EXT_texture_filter_anisotropic
+[31May2026 12:03:59.741] [Render thread/INFO] [net.minecraft.server.packs.resources.ReloadableResourceManager/]: Reloading ResourceManager: vanilla, mod_resources, mod/better_lib, mod/underground_village, mod/neoforge
+[31May2026 12:04:00.130] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_pua-17.0.01.hex, loading
+[31May2026 12:04:00.192] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_all_no_pua-17.0.01.hex, loading
+[31May2026 12:04:00.198] [resourceLoad/INFO] [net.minecraft.client.gui.font.providers.UnihexProvider/]: Found unifont_jp_patch-17.0.01.hex, loading
+[31May2026 12:04:00.981] [Render thread/WARN] [com.mojang.blaze3d.opengl.GlProgram/]: neoforge:pipeline/item_cutout_unlit shader program does not use sampler Sampler2 defined in the pipeline. This might be a bug.
+[31May2026 12:04:00.984] [Render thread/WARN] [com.mojang.blaze3d.opengl.GlProgram/]: neoforge:pipeline/item_translucent_unlit shader program does not use sampler Sampler2 defined in the pipeline. This might be a bug.
+[31May2026 12:04:01.017] [Render thread/INFO] [com.mojang.blaze3d.audio.Library/]: OpenAL initialized on device OpenAL Soft on Speakers (Realtek(R) Audio)
+[31May2026 12:04:01.020] [Render thread/INFO] [net.minecraft.client.sounds.SoundEngine/SOUNDS]: Sound engine started
+[31May2026 12:04:01.021] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/particles.png-atlas
+[31May2026 12:04:01.031] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x128x0 minecraft:textures/atlas/decorated_pot.png-atlas
+[31May2026 12:04:01.032] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x1024x0 minecraft:textures/atlas/armor_trims.png-atlas
+[31May2026 12:04:01.047] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/paintings.png-atlas
+[31May2026 12:04:01.049] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/shield_patterns.png-atlas
+[31May2026 12:04:01.051] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 2048x2048x4 minecraft:textures/atlas/blocks.png-atlas
+[31May2026 12:04:01.099] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/chest.png-atlas
+[31May2026 12:04:01.100] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 256x128x0 minecraft:textures/atlas/celestials.png-atlas
+[31May2026 12:04:01.102] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/banner_patterns.png-atlas
+[31May2026 12:04:01.103] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/beds.png-atlas
+[31May2026 12:04:01.104] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x512x0 minecraft:textures/atlas/items.png-atlas
+[31May2026 12:04:01.113] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 1024x1024x0 minecraft:textures/atlas/gui.png-atlas
+[31May2026 12:04:01.122] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 128x64x0 minecraft:textures/atlas/map_decorations.png-atlas
+[31May2026 12:04:01.123] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x256x0 minecraft:textures/atlas/signs.png-atlas
+[31May2026 12:04:01.124] [Render thread/INFO] [net.minecraft.client.renderer.texture.TextureAtlas/]: Created: 512x512x0 minecraft:textures/atlas/shulker_boxes.png-atlas
+[31May2026 12:04:01.231] [Render thread/INFO] [net.neoforged.neoforge.client.entity.animation.json.AnimationLoader/]: Loaded 0 entity animations
+[31May2026 12:04:08.851] [Worker-Main-3/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'stoneholm:andesite_worker' from 'stoneholm:loot_table/andesite_worker.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:precision_mechanism; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:rose_quartz; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:electron_tube; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:brass_sheet; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:copper_sheet; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:brass_ingot; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:large_cogwheel; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:cogwheel; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:shaft; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:andesite_alloy': Optional[Optional[net.minecraft.world.level.storage.loot.LootTable@35a6e9ad]]]
+[31May2026 12:04:08.923] [Worker-Main-3/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'stoneholm:brass_worker' from 'stoneholm:loot_table/brass_worker.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:precision_mechanism; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:rose_quartz; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:electron_tube; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:brass_sheet; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:copper_sheet; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:brass_ingot; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:large_cogwheel; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:cogwheel; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:shaft; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:andesite_alloy': Optional[Optional[net.minecraft.world.level.storage.loot.LootTable@10c75e64]]]
+[31May2026 12:04:08.939] [Worker-Main-3/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'stoneholm:cleric' from 'stoneholm:loot_table/cleric.json': DataResult.Error['Failed to parse either. First: Unknown registry key in ResourceKey[minecraft:root / minecraft:loot_function_type]: minecraft:set_nbt; Second: Not a json array: {"function":"minecraft:set_nbt","tag":"{Potion:\"minecraft:invisibility\"}"}; Failed to parse either. First: Unknown registry key in ResourceKey[minecraft:root / minecraft:loot_function_type]: minecraft:set_nbt; Second: Not a json array: {"function":"minecraft:set_nbt","tag":"{Potion:\"minecraft:strength\"}"}; Failed to parse either. First: Unknown registry key in ResourceKey[minecraft:root / minecraft:loot_function_type]: minecraft:set_nbt; Second: Not a json array: {"function":"minecraft:set_nbt","tag":"{Potion:\"minecraft:strong_harming\"}"}; Failed to parse either. First: Unknown registry key in ResourceKey[minecraft:root / minecraft:loot_function_type]: minecraft:set_nbt; Second: Not a json array: {"function":"minecraft:set_nbt","tag":"{Potion:\"minecraft:night_vision\"}"}; Failed to parse either. First: Unknown registry key in ResourceKey[minecraft:root / minecraft:loot_function_type]: minecraft:set_nbt; Second: Not a json array: {"function":"minecraft:set_nbt","tag":"{Potion:\"minecraft:regeneration\"}"}': Optional[Optional[net.minecraft.world.level.storage.loot.LootTable@3f90afff]]]
+[31May2026 12:04:08.939] [Worker-Main-3/ERROR] [net.minecraft.server.packs.resources.SimpleJsonResourceReloadListener/]: Couldn't parse data file 'stoneholm:copper_worker' from 'stoneholm:loot_table/copper_worker.json': DataResult.Error['Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:precision_mechanism; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:rose_quartz; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:electron_tube; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:brass_sheet; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:copper_sheet; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:brass_ingot; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:large_cogwheel; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:cogwheel; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:shaft; Unknown registry key in ResourceKey[minecraft:root / minecraft:item]: create:andesite_alloy': Optional[Optional[net.minecraft.world.level.storage.loot.LootTable@679bf82e]]]
+[31May2026 12:04:09.190] [Render thread/INFO] [net.minecraft.world.item.crafting.RecipeManager/]: Loaded 1515 recipes
+[31May2026 12:04:09.203] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 1617 advancements
+[31May2026 12:04:09.206] [Render thread/INFO] [net.neoforged.neoforge.common.crafting.RecipePriorityManager/]: Loaded 0 recipe priority overrides
+[31May2026 12:04:09.349] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Starting integrated minecraft server version 26.1
+[31May2026 12:04:09.349] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Generating keypair
+[31May2026 12:04:09.691] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Loading 0 persistent chunks...
+[31May2026 12:04:09.691] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[31May2026 12:04:09.702] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[31May2026 12:04:09.822] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[31May2026 12:04:09.893] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[31May2026 12:04:10.028] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[31May2026 12:04:10.028] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[31May2026 12:04:10.028] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[31May2026 12:04:10.028] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[31May2026 12:04:10.031] [Server thread/INFO] [net.neoforged.neoforge.server.permission.PermissionAPI/]: Successfully initialized permission handler neoforge:default_handler
+[31May2026 12:04:10.456] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Loading 49 chunks for player spawn...
+[31May2026 12:04:10.456] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 16%
+[31May2026 12:04:10.738] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 45%
+[31May2026 12:04:11.234] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 45%
+[31May2026 12:04:11.733] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 45%
+[31May2026 12:04:12.233] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 45%
+[31May2026 12:04:12.732] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 59%
+[31May2026 12:04:13.234] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 59%
+[31May2026 12:04:13.732] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Preparing spawn area: 59%
+[31May2026 12:04:14.132] [Server thread/INFO] [net.minecraft.server.level.progress.LoggingLevelLoadListener/]: Time elapsed: 4442 ms
+[31May2026 12:04:14.375] [Server thread/INFO] [net.minecraft.server.players.PlayerList/]: Dev[local:E:e664fc32] logged in with entity id 10 at (-24.5, 91.0, -44.5)
+[31May2026 12:04:14.415] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev joined the game
+[31May2026 12:04:14.489] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing view distance to 16, from 10
+[31May2026 12:04:14.491] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Changing simulation distance to 12, from 0
+[31May2026 12:04:14.525] [Render thread/WARN] [net.minecraft.client.multiplayer.ClientPacketListener/]: Ignoring chat session from Dev due to missing Services public key
+[31May2026 12:04:14.528] [Render thread/INFO] [net.minecraft.advancements.AdvancementTree/]: Loaded 2 advancements
+[31May2026 12:04:14.591] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[31May2026 12:04:14.666] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[31May2026 12:04:14.733] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 2 reached during a single frame. New capacity will be 4.
+[31May2026 12:04:14.750] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 4 reached during a single frame. New capacity will be 8.
+[31May2026 12:04:14.776] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[31May2026 12:04:14.812] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 16 reached during a single frame. New capacity will be 32.
+[31May2026 12:04:14.833] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[31May2026 12:04:14.869] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[31May2026 12:04:14.873] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[31May2026 12:04:14.873] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[31May2026 12:04:27.929] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 32 reached during a single frame. New capacity will be 64.
+[31May2026 12:04:28.025] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 64 reached during a single frame. New capacity will be 128.
+[31May2026 12:04:28.213] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 128 reached during a single frame. New capacity will be 256.
+[31May2026 12:04:28.527] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 256 reached during a single frame. New capacity will be 512.
+[31May2026 12:04:29.155] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 512 reached during a single frame. New capacity will be 1024.
+[31May2026 12:04:34.846] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Dynamic Transforms UBO, capacity limit of 8 reached during a single frame. New capacity will be 16.
+[31May2026 12:04:37.223] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 1024 reached during a single frame. New capacity will be 2048.
+[31May2026 12:04:41.629] [worldgen/ERROR] [net.minecraft.world.level.levelgen.structure.templatesystem.loader.ResourceManagerTemplateSource/]: Couldn't load structure stoneholm:poi/v4/founten
+net.minecraft.nbt.NbtFormatException: Missing type on ListTag
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:38) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:25) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:19) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:449) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:67) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:46) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:40) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.ListTag$1.loadList(ListTag.java:45) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:25) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.ListTag$1.load(ListTag.java:19) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.CompoundTag.readNamedTagData(CompoundTag.java:449) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.CompoundTag$1.loadCompound(CompoundTag.java:67) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:46) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.CompoundTag$1.load(CompoundTag.java:40) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.NbtIo.readTagSafe(NbtIo.java:194) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.NbtIo.readUnnamedTag(NbtIo.java:188) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.NbtIo.read(NbtIo.java:121) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.nbt.NbtIo.readCompressed(NbtIo.java:54) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.templatesystem.loader.TemplateSource.readStructure(TemplateSource.java:66) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.templatesystem.loader.TemplateSource.load(TemplateSource.java:50) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.templatesystem.loader.ResourceManagerTemplateSource.load(ResourceManagerTemplateSource.java:35) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager.tryLoad(StructureTemplateManager.java:102) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at java.base/java.util.concurrent.ConcurrentHashMap.computeIfAbsent(ConcurrentHashMap.java:1724) ~[?:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager.get(StructureTemplateManager.java:92) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.templatesystem.StructureTemplateManager.getOrCreate(StructureTemplateManager.java:81) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-9.0.19.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement.getTemplate(SinglePoolElement.java:89) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.pools.SinglePoolElement.getShuffledJigsawBlocks(SinglePoolElement.java:118) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement$Placer.tryPlacingChildren(JigsawPlacement.java:357) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement.addPieces(JigsawPlacement.java:208) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement.lambda$addPieces$2(JigsawPlacement.java:137) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.Structure$GenerationStub.lambda$getPiecesBuilder$0(Structure.java:286) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at com.mojang.datafixers.util.Either$Left.map(Either.java:38) ~[datafixerupper-9.0.19.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.Structure$GenerationStub.getPiecesBuilder(Structure.java:284) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.levelgen.structure.Structure.generate(Structure.java:105) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.chunk.ChunkGenerator.tryGenerateStructure(ChunkGenerator.java:579) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.chunk.ChunkGenerator.lambda$createStructures$0(ChunkGenerator.java:501) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at java.base/java.lang.Iterable.forEach(Iterable.java:75) ~[?:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.chunk.ChunkGenerator.createStructures(ChunkGenerator.java:487) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.chunk.status.ChunkStatusTasks.generateStructureStarts(ChunkStatusTasks.java:44) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.world.level.chunk.status.ChunkStep.apply(ChunkStep.java:24) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.server.level.ChunkMap.applyStep(ChunkMap.java:640) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.server.level.GenerationChunkHolder.applyStep(GenerationChunkHolder.java:66) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.server.level.ChunkGenerationTask.scheduleChunkInLayer(ChunkGenerationTask.java:141) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.server.level.ChunkGenerationTask.scheduleLayer(ChunkGenerationTask.java:121) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.server.level.ChunkGenerationTask.scheduleNextLayer(ChunkGenerationTask.java:68) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.server.level.ChunkGenerationTask.runUntilWait(ChunkGenerationTask.java:53) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.server.level.ChunkMap.lambda$runGenerationTask$0(ChunkMap.java:665) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.server.level.ChunkTaskDispatcher.lambda$scheduleForExecution$1(ChunkTaskDispatcher.java:90) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.util.thread.TaskScheduler.lambda$scheduleWithResult$0(TaskScheduler.java:20) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.util.Util.runNamed(Util.java:291) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.util.thread.AbstractConsecutiveExecutor.pollTask(AbstractConsecutiveExecutor.java:47) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at TRANSFORMER/minecraft@26.1/net.minecraft.util.thread.AbstractConsecutiveExecutor.run(AbstractConsecutiveExecutor.java:56) ~[minecraft-patched-26.1.0.1-beta.jar:?]
+	at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1750) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask$RunnableExecuteAction.compute(ForkJoinTask.java:1742) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask$InterruptibleTask.exec(ForkJoinTask.java:1659) [?:?]
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:511) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1450) [?:?]
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:2019) [?:?]
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:187) [?:?]
+[31May2026 12:04:42.248] [worldgen/WARN] [net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement/]: Empty or non-existent pool: stoneholm:villager
+[31May2026 12:04:42.791] [worldgen/WARN] [net.minecraft.world.level.levelgen.structure.pools.JigsawPlacement/]: Empty or non-existent pool: stoneholm:villager
+[31May2026 12:04:43.041] [Server thread/INFO] [net.minecraft.server.commands.LocateCommand/]: Locating element underground_village:underground_village took 8838 ms
+[31May2026 12:04:43.042] [Server thread/WARN] [net.minecraft.server.MinecraftServer/]: Can't keep up! Is the server overloaded? Running 8810ms or 176 ticks behind
+[31May2026 12:04:43.052] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[31May2026 12:04:43.052] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] The nearest underground_village:underground_village is at [-1968, ~, -2272] (2955 blocks away)
+[31May2026 12:04:43.098] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[31May2026 12:04:43.161] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[31May2026 12:04:43.161] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[31May2026 12:04:54.590] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Teleported Dev to -1967.500000, 91.000000, -2271.500000]
+[31May2026 12:04:54.596] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Teleported Dev to -1967.500000, 91.000000, -2271.500000
+[31May2026 12:04:55.328] [worldgen/ERROR] [net.minecraft.world.entity.decoration.BlockAttachedEntity/]: Block-attached entity at invalid position: BlockPos{x=-71, y=6, z=-215}
+[31May2026 12:04:55.331] [worldgen/ERROR] [net.minecraft.world.entity.decoration.BlockAttachedEntity/]: Block-attached entity at invalid position: BlockPos{x=-71, y=7, z=-210}
+[31May2026 12:04:56.032] [worldgen/ERROR] [net.minecraft.world.entity.decoration.BlockAttachedEntity/]: Block-attached entity at invalid position: BlockPos{x=-71, y=7, z=-210}
+[31May2026 12:04:59.330] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: [Dev: Set own game mode to Spectator Mode]
+[31May2026 12:04:59.337] [Render thread/INFO] [net.minecraft.client.gui.components.ChatComponent/]: [System] [CHAT] Set own game mode to Spectator Mode
+[31May2026 12:05:20.584] [Render thread/INFO] [net.minecraft.client.renderer.DynamicUniformStorage/]: Resizing Chunk Sections UBO, capacity limit of 2048 reached during a single frame. New capacity will be 4096.
+[31May2026 12:05:34.883] [Server thread/INFO] [net.minecraft.client.server.IntegratedServer/]: Saving and pausing game...
+[31May2026 12:05:35.106] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[31May2026 12:05:35.198] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[31May2026 12:05:35.198] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[31May2026 12:05:36.064] [Server thread/INFO] [net.minecraft.server.network.ServerGamePacketListenerImpl/]: Dev lost connection: Disconnected
+[31May2026 12:05:36.065] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Dev left the game
+[31May2026 12:05:36.321] [Server thread/INFO] [net.minecraft.server.network.ServerCommonPacketListenerImpl/]: Stopping singleplayer server as player logged out
+[31May2026 12:05:36.330] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Stopping server
+[31May2026 12:05:36.330] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving players
+[31May2026 12:05:36.330] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving worlds
+[31May2026 12:05:43.225] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:overworld
+[31May2026 12:05:45.921] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_end
+[31May2026 12:05:45.966] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: Saving chunks for level 'ServerLevel[New World]'/minecraft:the_nether
+[31May2026 12:05:46.034] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (world): All chunks are saved
+[31May2026 12:05:46.034] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM1): All chunks are saved
+[31May2026 12:05:46.034] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage (DIM-1): All chunks are saved
+[31May2026 12:05:46.034] [Server thread/INFO] [net.minecraft.server.MinecraftServer/]: ThreadedAnvilChunkStorage: All dimensions are saved
+[31May2026 12:05:59.338] [Render thread/INFO] [net.minecraft.client.Minecraft/]: Stopping!

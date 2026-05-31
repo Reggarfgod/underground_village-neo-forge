@@ -1,0 +1,37 @@
+{
+  "structureSize": {
+    "value": 15,
+    "category": "Generation",
+    "description": "Default size of underground village structures."
+  },
+  "maxDistanceFromCenter": {
+    "value": 116,
+    "category": "Generation",
+    "description": "Maximum distance structure pieces can generate from the village center."
+  },
+  "waterStructureSize": {
+    "value": 15,
+    "category": "Water Structures",
+    "description": "Default size of water-based underground village structures."
+  },
+  "waterMaxDistanceFromCenter": {
+    "value": 116,
+    "category": "Water Structures",
+    "description": "Maximum distance water structure pieces can generate from the center."
+  },
+  "placementSpacing": {
+    "value": 72,
+    "category": "Structure Placement",
+    "description": "Spacing between underground village placements (must be greater than separation)."
+  },
+  "placementSeparation": {
+    "value": 32,
+    "category": "Structure Placement",
+    "description": "Minimum separation between underground village placements."
+  },
+  "enableInGameMessage": {
+    "value": true,
+    "category": "Messages",
+    "description": "Show the welcome message with Discord, GitHub, and support links on first join. (Requires restart)"
+  }
+}
