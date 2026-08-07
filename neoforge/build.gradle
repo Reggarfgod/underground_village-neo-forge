@@ -68,5 +68,5 @@ repositories {
 
 dependencies {
 
-    implementation "curse.maven:better-library-1150683:7875779"
+    implementation "curse.maven:better-library-1150683:8593404"
 }

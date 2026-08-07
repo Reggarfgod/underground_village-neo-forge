@@ -32,7 +32,7 @@ side = "BOTH"
 [[dependencies."${mod_id}"]]
 modId = "better_lib"
 type="required" #mandatory (Can be one of "required", "optional", "incompatible" or "discouraged")
-versionRange = "[1.0.109,)"
+versionRange = "[2.1.0,)"
 ordering = "NONE"
 side = "BOTH"
 # Features are specific properties of the game environment, that you may want to declare you require. This example declares

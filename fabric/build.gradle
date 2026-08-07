@@ -12,7 +12,7 @@ dependencies {
     minecraft "com.mojang:minecraft:${minecraft_version}"
     implementation "net.fabricmc:fabric-loader:${fabric_loader_version}"
     implementation "net.fabricmc.fabric-api:fabric-api:${fabric_version}"
-    implementation "curse.maven:better-library-1150683:7875785"
+    implementation "curse.maven:better-library-1150683:8593399"
     implementation "curse.maven:modmenu-308702:7813924"
 }
 
